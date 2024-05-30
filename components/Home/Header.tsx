@@ -13,7 +13,7 @@ import {
   
 const Header = () => {
   return (
-    <header className='w-full  h-auto max-h-[86px] md:p-[20px_60px] p-[12px] gap-0 border-b flex justify-between'>
+    <header className='  h-auto max-h-[86px] md:p-[20px_60px] p-[12px] gap-0 border-b flex justify-between'>
         <Image
               src={logo}
               alt="Vercel Logo"
