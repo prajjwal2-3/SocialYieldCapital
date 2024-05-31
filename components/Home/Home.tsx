@@ -3,6 +3,8 @@ import Header from './Header'
 import Hero from './Hero'
 import Sub from './Sub'
 import About from './About'
+import CustomizedAccordions from './Accordian'
+import Accordianbg from './Accordianbg'
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
       <Hero/>
       <Sub/>
       <About/>
+      <Accordianbg/>
+      
     </div>
   )
 }
