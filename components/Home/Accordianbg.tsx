@@ -84,15 +84,15 @@ const Accordianbg = () => {
                 aria-controls={e.control}
                 id={e.id}
               >
-                <Typography className="text-3xl text-[#FFFFFF] font-semibold flex">
-                  <p className="text-3xl text-[#8AA7B1] font-semibold px-2">
+                <Typography className="text-3xl 2xl:text-4xl 4xl:text-5xl text-[#FFFFFF] font-semibold flex">
+                  <p className="text-3xl 2xl:text-4xl 4xl:text-5xl text-[#8AA7B1] font-semibold px-2">
                     {e.number}
                   </p>
                   {e.Summary}
                 </Typography>
               </AccordionSummary>
-              <AccordionDetails className="border-0 px-20">
-                <Typography className="text-white font-medium text-xl">
+              <AccordionDetails className="border-0 px-20 4xl:px-24">
+                <Typography className="text-white font-medium text-xl 2xl:text-2xl 4xl:text-3xl">
                   lets begin the search for a property that fits your lifestyle
                   and aspirations.
                 </Typography>
