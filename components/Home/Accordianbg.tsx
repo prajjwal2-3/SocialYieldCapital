@@ -1,31 +1,30 @@
-'use client'
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import auto1 from '../../public/auto1.svg';
-import auto2 from '../../public/auto2.svg';
-import auto3 from '../../public/auto3.svg';
-import { styled } from '@mui/material/styles';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
-import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
+"use client";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import auto1 from "../../public/auto1.svg";
+import auto2 from "../../public/auto2.svg";
+import auto3 from "../../public/auto3.svg";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
+import MuiAccordionSummary, {
+  AccordionSummaryProps,
+} from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({}));
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
-  <MuiAccordionSummary
-  
-    {...props}
-  />
+  <MuiAccordionSummary {...props} />
 ))(({ theme }) => ({
-  flexDirection: 'row-reverse',
-  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-    transform: 'rotate(90deg)',
+  flexDirection: "row-reverse",
+  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+    transform: "rotate(90deg)",
   },
-  '& .MuiAccordionSummary-content': {
+  "& .MuiAccordionSummary-content": {
     marginLeft: theme.spacing(1),
   },
 }));
@@ -37,60 +36,76 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 const Accordianbg = () => {
   const images = [auto1, auto2, auto3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [expanded, setExpanded] = useState<string | false>('panel1');
-
+  const [expanded, setExpanded] = useState<string | false>("panel1");
+  const arr = [
+    {
+      panel: "panel1",
+      control: "panel1d-content",
+      id: "panel1d-header",
+      number: "01",
+      Summary: "Choose your dream location",
+    },
+    {
+      panel: "panel2",
+      control: "panel2d-content",
+      id: "panel2d-header",
+      number: "02",
+      Summary: "Tailor Your Investment",
+    },
+    {
+      panel: "panel3",
+      control: "panel3d-content",
+      id: "panel3d-header",
+      number: "03",
+      Summary: "Schedule Virtual Tours",
+    },
+  ];
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-      setExpanded(`panel${(currentImageIndex + 1) % images.length + 1}`);
+      setExpanded(`panel${((currentImageIndex + 1) % images.length) + 1}`);
     }, 3000); // Change image every 3 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [currentImageIndex, images.length]);
 
   return (
-    <div className='flex items-center justify-start'>
+    <div className="flex items-center justify-start">
       <div className="absolute w-full bg-black/50 h-[31rem] flex items-center justify-start">
-      <div className=' bg-transparent w-5/12'>
-        <Accordion className='bg-transparent border-none' expanded={expanded === 'panel1'} >
-          <AccordionSummary className='border-none' aria-controls="panel1d-content" id="panel1d-header">
-            <Typography className='text-3xl text-[#FFFFFF] font-semibold flex'>
-            <p className='text-3xl text-[#8AA7B1] font-semibold px-2'>01</p>
-                Choose your dream location</Typography>
-          </AccordionSummary>
-          <AccordionDetails className='border-none px-20'>
-            <Typography className='text-white font-medium text-xl'>
-            lets begin the search for a property that fits your lifestyle and aspirations.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion className='bg-transparent border-none' expanded={expanded === 'panel2'} >
-          <AccordionSummary className='border-none' aria-controls="panel2d-content" id="panel2d-header">
-            <Typography className='text-3xl text-[#FFFFFF] font-semibold flex'>
-                <p className='text-3xl text-[#8AA7B1] font-semibold px-2'>02</p>
-                Tailor Your Investment</Typography>
-          </AccordionSummary>
-          <AccordionDetails className='border-none px-20'>
-            <Typography className='text-white text-xl font-medium'>
-            lets begin the search for a property that fits your lifestyle and aspirations.
-            </Typography>
-          </AccordionDetails>
-        </Accordion >
-        <Accordion className='bg-transparent border-none' expanded={expanded === 'panel3'} >
-          <AccordionSummary className='border-none' aria-controls="panel3d-content" id="panel3d-header">
-            <Typography className='text-3xl text-[#FFFFFF] font-semibold flex'>
-            <p className='text-3xl text-[#8AA7B1] font-semibold px-2'>03</p>
-                Schedule Virtual Tours</Typography>
-          </AccordionSummary>
-          <AccordionDetails className='border-none px-20'>
-            <Typography className='text-white text-xl font-medium'>
-            lets begin the search for a property that fits your lifestyle and aspirations.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
+        <div className=" bg-transparent w-5/12">
+          {arr.map((e, index) => (
+            <Accordion
+            key={index}
+              className="bg-transparent border-0"
+              expanded={expanded === e.panel}
+            >
+              <AccordionSummary
+                className="border-0"
+                aria-controls={e.control}
+                id={e.id}
+              >
+                <Typography className="text-3xl text-[#FFFFFF] font-semibold flex">
+                  <p className="text-3xl text-[#8AA7B1] font-semibold px-2">
+                    {e.number}
+                  </p>
+                  {e.Summary}
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails className="border-0 px-20">
+                <Typography className="text-white font-medium text-xl">
+                  lets begin the search for a property that fits your lifestyle
+                  and aspirations.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          ))}
+        </div>
       </div>
-      </div>
-      <Image src={images[currentImageIndex]} alt='Auto changing image' className='w-full object-cover h-[31rem] '/>
+      <Image
+        src={images[currentImageIndex]}
+        alt="Auto changing image"
+        className="w-full object-cover h-[31rem] "
+      />
     </div>
   );
 };

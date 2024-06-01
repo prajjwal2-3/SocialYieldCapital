@@ -13,26 +13,26 @@ import coder from '../../public/coderrrr.svg'
 const Hero = () => {
   return (
     <div className="-mt-16">
-       <section className="w-full h-4/6 lg:h-5/6 absolute p-16 my-16">
-       <h1 className="text-6xl text-[#1C2B31] w-7/12 h-2/6">
+       <section className="w-full h-fit absolute p-16 my-8 xl:my-10 2xl:my-12 3xl:my-16 4xl:my-20">
+       <h1 className="text-[2.4rem] xl:text-[2.6rem] 2xl:text-[3.8rem] 3xl:text-[4.6rem] 4xl:text-[5.4rem] text-[#1C2B31] w-7/12 h-fit ">
           Invest in <span className="font-semibold">real-estate</span> with
           Social yield capital
         </h1>
-        <div className="flex w-4/12 my-6 justify-between">
+        <div className="flex w-4/12  justify-between">
           <Image src={uk24} alt="" className="" />
           <Image src={people} alt="" className="" />
         </div>
-        <div className="absolute w-5/12 h-1/6 flex flex-col mt-32 justify-between ">
-          <p className="text-[#1C2B31] text-lg font-medium">
+        <div className="absolute w-5/12 3xl:w-6/12  flex flex-col mt-10 xl:mt-20 2xl:mt-24 4xl:mt-48 justify-between gap-3">
+          <p className="text-[#1C2B31] text-lg xl:text-[1.5rem] 2xl:text-[1.65rem] 3xl:text-4xl 4xl:text-5xl font-medium">
             Your gateway to smarter co-ownership and seamless property
             management, all under the trusted guardianship of the UKs finest real
             estate innovators.
           </p>
-          <section className="w-10/12 flex gap-4">
-            <button className="w-fit bg-[#1C2B31] font-medium rounded-full p-[12px_20px] text-white">
+          <section className="w-10/12 flex gap-4 3xl:gap-8">
+            <button className="w-fit bg-[#1C2B31] font-medium rounded-full p-[12px_20px] 3xl:p-[20px_28px] 4xl:p-[28px_36px] 4xl:text-xl text-white">
               Start Investing
             </button>
-            <button className="w-fit border-[#1C2B31] border rounded-full p-[12px_20px] text-[#1C2B31] font-medium">
+            <button className="w-fit border-[#1C2B31] border rounded-full p-[12px_20px] 3xl:p-[20px_28px] 4xl:p-[28px_36px] 4xl:text-xl text-[#1C2B31] font-medium">
               Who are we
             </button>
           </section>
@@ -43,6 +43,7 @@ const Hero = () => {
         src={coder} 
         alt="" 
         className=" w-full" 
+        priority
       />
       
     </div>
