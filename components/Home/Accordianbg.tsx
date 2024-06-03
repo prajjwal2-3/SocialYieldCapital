@@ -92,7 +92,7 @@ const Accordianbg = () => {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails className="border-0 px-20 4xl:px-24">
-                <Typography className="text-white font-medium text-xl 2xl:text-2xl 4xl:text-3xl">
+                <Typography className="text-Sur-White font-medium text-xl 2xl:text-2xl 4xl:text-3xl">
                   lets begin the search for a property that fits your lifestyle
                   and aspirations.
                 </Typography>

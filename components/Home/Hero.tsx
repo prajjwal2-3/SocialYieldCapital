@@ -12,7 +12,7 @@ import Image from "next/image";
 import coder from '../../public/coderrrr.svg'
 const Hero = () => {
   return (
-    <div className="-mt-16">
+    <div className="">
        <section className="w-full h-fit absolute p-16 my-8 xl:my-10 2xl:my-12 3xl:my-16 4xl:my-20">
        <h1 className="text-[2.4rem] xl:text-[2.6rem] 2xl:text-[3.8rem] 3xl:text-[4.6rem] 4xl:text-[5.4rem] text-[#1C2B31] w-7/12 h-fit ">
           Invest in <span className="font-semibold">real-estate</span> with
@@ -29,7 +29,7 @@ const Hero = () => {
             estate innovators.
           </p>
           <section className="w-10/12 flex gap-4 3xl:gap-8">
-            <button className="w-fit bg-[#1C2B31] font-medium rounded-full p-[12px_20px] 3xl:p-[20px_28px] 4xl:p-[28px_36px] 4xl:text-xl text-white">
+            <button className="w-fit bg-[#1C2B31] font-medium rounded-full p-[12px_20px] 3xl:p-[20px_28px] 4xl:p-[28px_36px] 4xl:text-xl text-Sur-White">
               Start Investing
             </button>
             <button className="w-fit border-[#1C2B31] border rounded-full p-[12px_20px] 3xl:p-[20px_28px] 4xl:p-[28px_36px] 4xl:text-xl text-[#1C2B31] font-medium">

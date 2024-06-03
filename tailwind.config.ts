@@ -10,6 +10,25 @@ const config = {
 	],
   prefix: "",
   theme: {
+    colors:{
+      transparent: 'transparent',
+      current: 'currentColor',
+      "Brand/Primary":"#507B8B",
+      "Brand/Light":"#8aa7b1",
+      "Brand/Dark":"#395763",
+      "Sur-Gradient":"#507b8b",
+      "Sur-White":"#ffffff",
+      "Border":"#538586",
+      "Sur-light 100":"#f6f8f9",
+      "Sur-light 200":"#e3eaec",
+      "Sur-light 300":"#D3DEE2",
+      "Sur-light 400":"#C4D2D8",
+      "Primary":"#e6e6e6",
+      "L-Primary":"#1c2b31",
+      "L-Secondary":"#6b7579",
+      "D-Primary":"#ffffff",
+      "D-Secondary":"#C9D6D8"
+    },
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }

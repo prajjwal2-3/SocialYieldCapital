@@ -13,9 +13,9 @@ import SvgComponent from './Footersvg'
 const Home = () => {
   return (
     <div className=''>
-     <div className="">
+    
      <Header/>
-     </div>
+     
       <Hero/>
       <Sub/>
       <About/>

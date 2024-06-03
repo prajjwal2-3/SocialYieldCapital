@@ -36,7 +36,7 @@ const Cards = () => {
           <div className="mt-32 sm:mt-48 lg:mt-64 bg-[#22343AE5] transform transition-all duration-300 ease-in-out translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 rounded-lg">
             <div className="flex justify-between px-3 py-4">
               <section>
-                <p className='text-white text-xl font-medium'>{e.title}</p>
+                <p className='text-Sur-White text-xl font-medium'>{e.title}</p>
                 <p className='text-base text-[#AFC2CA] font-medium'>{e.address}</p>
               </section>
               <section>
@@ -44,11 +44,11 @@ const Cards = () => {
               </section>
             </div>
             <div className="flex justify-between mt-5 px-3">
-              <p className='text-white text-xl font-medium'>$830,560</p>
+              <p className='text-Sur-White text-xl font-medium'>$830,560</p>
               <p className='text-base text-[#AFC2CA] font-medium'>1/8 ownership</p>
             </div>
             <div className='flex justify-center p-5 '>
-              <button className="bg-[#1C2B31] text-white px-4 py-2 w-full rounded">Sign up to explore</button>
+              <button className="bg-[#1C2B31] text-Sur-White px-4 py-2 w-full rounded">Sign up to explore</button>
             </div>
           </div>
           
