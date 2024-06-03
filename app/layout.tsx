@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Social Yield Capital",
-  
+
 };
 
 export default function RootLayout({
@@ -22,6 +22,9 @@ export default function RootLayout({
   return (
     <>
     <html lang="en">
+      <head>
+        <link rel="icon" href="https://res.cloudinary.com/dzkldv06d/image/upload/v1717440101/favicon_skkreq.ico" />
+      </head>
       <body className={inter.className}>
         <Header/>
         {children}
