@@ -14,7 +14,7 @@ import Link from 'next/link';
   
 const Header = () => {
   return (
-    <div className='fixed w-full bg-Sur-White h-auto max-h-[86px] md:p-[20px_60px] p-[12px]  gap-0 border-b flex justify-between'>
+    <div className='fixed w-full bg-Sur-White h-auto max-h-[86px] md:p-[20px_60px] p-[12px] z-50 gap-0 border-b flex justify-between'>
         <Image
               src={logo}
               alt="Vercel Logo"
