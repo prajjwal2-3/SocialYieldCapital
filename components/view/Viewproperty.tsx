@@ -53,7 +53,9 @@ const Viewproperty = () => {
   return (
     <div className="pt-20 bg-Sur-light-200">
       <div className="w-full h-20 bg-L-Primary"></div>
+     
       <div className="px-14 -mt-14 flex gap-2 pb-5 w-full justify-center items-center">
+       
         <Image src={main} alt="" className="w-7/12" />
 
         <div className="flex flex-wrap justify-center items-center w-5/12 gap-2">
@@ -124,7 +126,7 @@ const Viewproperty = () => {
           </section>
           </div>
           <div className="">
-            <Image src={map} alt=""/>
+            <Image src={map} alt="" className="w-full"/>
           </div>
         </div>
         <div className=""></div>

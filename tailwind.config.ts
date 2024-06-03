@@ -14,6 +14,7 @@ const config = {
       transparent: 'transparent',
       current: 'currentColor',
       "Brand/Primary":"#507B8B",
+      "black":"#000000",
       "Brand/Light":"#8aa7b1",
       "Brand/Dark":"#395763",
       "Sur-Gradient":"#507b8b",

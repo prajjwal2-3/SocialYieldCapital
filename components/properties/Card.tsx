@@ -3,6 +3,7 @@ import house1 from "../../public/house12.svg";
 import house2 from "../../public/house22.svg";
 import house3 from "../../public/house32.svg";
 import Image from "next/image";
+import Link from "next/link";
 const Card = () => {
   const arr = [
     { imagelink: house1,
@@ -83,8 +84,10 @@ const Card = () => {
   return (
 
   <div className="flex flex-wrap justify-center items-center p-10">
+   
    {arr.map((e,index)=>
- <div key={index} className="w-3/12 m-6 shadow-xl h-fit bg-Sur-White rounded-lg hover:scale-105 duration-300 transition-transform ease-in-out">
+   <Link href='/view' className="w-3/12 m-6 shadow-xl h-fit bg-Sur-White rounded-lg hover:scale-105 duration-300 transition-transform ease-in-out">
+ <div key={index} className="">
 
 <div className="h-48">
 <Image src={e.imagelink} alt="" className="w-full  rounded-t-lg object-cover h-full inset-y-10"/>
@@ -106,7 +109,9 @@ const Card = () => {
  </section>
  </div>
      </div>
+      </Link>
 )}
+  
   </div>
   )
 };
