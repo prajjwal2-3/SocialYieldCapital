@@ -1,21 +1,13 @@
 "use client";
 import React from "react";
-import logo from "../../public/logo.svg";
-import Image from "next/image";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import {RegisterLink, LoginLink, LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
+import {useKindeBrowserClient} from "@kinde-oss/kinde-auth-nextjs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
   const path = usePathname();
+  const {user}=useKindeBrowserClient()
   return (
     <div
       className={`fixed w-full ${
@@ -32,7 +24,7 @@ const Header = () => {
         SYC
       </p>
       <div
-        className={`w-96 h-11 gap-5 flex  ${
+        className={`w-5/12 justify-center items-center h-11 gap-5 flex  ${
           path === "/view" ? "text-Sur-White" : "text-L-Primary"
         }`}
       >
@@ -43,9 +35,14 @@ const Header = () => {
         <button className="">
           <Link href="/properties">Properties</Link>
         </button>
-        <button className="bg-[#507B8B] text-Sur-White  rounded-full  h-11 p-[12px_20px_12px_20px]">
-          <Link href="/Auth">Sign up</Link>
-        </button>
+     
+      {user?
+    <LogoutLink className="w-fit text-center py-2 bg-Brand/Primary hover:bg-Brand/Dark px-4 rounded-full text-Sur-White">Logout</LogoutLink>:
+    <>
+     <RegisterLink className="w-fit text-center py-2 bg-Brand/Primary hover:bg-Brand/Dark px-4 rounded-full text-Sur-White">Sign up</RegisterLink>
+        <LoginLink className="w-fit text-center py-2 bg-Brand/Primary hover:bg-Brand/Dark px-4 rounded-full text-Sur-White">Sign in</LoginLink>
+    </>  
+    }
       </div>
     </div>
   );
