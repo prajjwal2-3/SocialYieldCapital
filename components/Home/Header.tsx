@@ -29,7 +29,11 @@ const Header = () => {
                   </Link>
                 </button>
                 <button className='text-[#1C2B31]'>About us</button>
-                <button className='text-[#1C2B31]'>Properties</button>
+                <button className='text-[#1C2B31]'>
+                <Link href='/properties'>
+                  Properties
+                  </Link>
+                </button>
                 <button  className='bg-[#507B8B] text-Sur-White  rounded-full  h-11 p-[12px_20px_12px_20px]'>
                 <Link
                  href='/Auth'

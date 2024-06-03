@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div className=''>
     
-     <Header/>
+  
      
       <Hero/>
       <Sub/>
