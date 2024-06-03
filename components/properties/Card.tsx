@@ -86,8 +86,8 @@ const Card = () => {
   <div className="flex flex-wrap justify-center items-center p-10">
    
    {arr.map((e,index)=>
-   <Link href='/view' className="w-3/12 m-6 shadow-xl h-fit bg-Sur-White rounded-lg hover:scale-105 duration-300 transition-transform ease-in-out">
- <div key={index} className="">
+   <Link href='/view' key={index} className="w-3/12 m-6 shadow-xl h-fit bg-Sur-White rounded-lg hover:scale-105 duration-300 transition-transform ease-in-out">
+ <div  className="">
 
 <div className="h-48">
 <Image src={e.imagelink} alt="" className="w-full  rounded-t-lg object-cover h-full inset-y-10"/>
