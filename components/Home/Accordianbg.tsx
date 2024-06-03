@@ -71,7 +71,7 @@ const Accordianbg = () => {
 
   return (
     <div className="flex items-center justify-start">
-      <div className="absolute w-full bg-black/50 h-[31rem] flex items-center justify-start">
+      <div className="absolute w-full bg-L-Primary/50 h-[31rem] flex items-center justify-start">
         <div className=" bg-transparent w-5/12">
           {arr.map((e, index) => (
             <Accordion
