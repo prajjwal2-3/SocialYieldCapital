@@ -14,7 +14,7 @@ import coder from "../../public/coderrrr.svg";
 const Hero = () => {
   return (
     <div className="">
-      <section className="w-full h-fit absolute p-16 my-8 xl:my-10 2xl:my-12 3xl:my-16 4xl:my-20">
+      <section className="w-full z-40 h-fit absolute p-16 my-8 xl:my-10 2xl:my-12 3xl:my-16 4xl:my-20">
         <h1 className="text-[2.4rem] xl:text-[2.6rem] 2xl:text-[3.8rem] 3xl:text-[4.6rem] 4xl:text-[5.4rem] text-Sur-White w-7/12 h-fit ">
           Invest in <span className="font-semibold text-L-Primary">real-estate</span> with
           Social yield capital
