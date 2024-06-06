@@ -5,6 +5,7 @@ import house1 from '../../public/house1.svg'
 import arrow from '../../public/arrow.svg'
 import house2 from '../../public/house2.svg'
 import house3 from '../../public/house3.svg'
+import {motion} from 'framer-motion'
 const Cards = () => {
   const arr =[{
     image:house1,
@@ -22,7 +23,12 @@ const Cards = () => {
   return (
     <div className="flex ">
       {arr.map((e,index)=>
-      <div key={index} className='w-4/12 h-[36rem] m-5 xl:m-7 2xl:m-9 3xl:m-12 4xl:m-14'>
+      <motion.div 
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.5 }} 
+      transition={{ duration: 0.5 }} 
+      key={index} className='w-4/12 h-[36rem] m-5 xl:m-7 2xl:m-9 3xl:m-12 4xl:m-14'>
       <a href="#" className="group relative block bg-black overflow-hidden rounded-lg">
         <div className="w-full h-full">
           <Image
@@ -54,7 +60,7 @@ const Cards = () => {
           
         </div>
       </a>
-    </div>
+    </motion.div>
       )}
       
       
