@@ -50,7 +50,7 @@ const Hero = () => {
   ];
   return (
     <div className="h-full">
-      <section className="w-full z-40 h-fit absolute p-16 my-8 xl:my-10 2xl:my-12 3xl:my-16 4xl:my-20">
+      <section className="w-full  z-40 h-fit absolute p-6 sm:p-16 my-28 sm:my-10 2xl:my-12 3xl:my-16 4xl:my-20">
         <motion.div
           animate={{
             opacity: [0, 1],
@@ -60,7 +60,7 @@ const Hero = () => {
             duration: 1,
             type: "keyframes",
           }}
-          className="text-[2.4rem] xl:text-[2.6rem] 2xl:text-[3.8rem] 3xl:text-[4.6rem] 4xl:text-[5.4rem] text-Sur-White w-7/12 h-fit "
+          className="text-[2.4rem] xl:text-[2.6rem] 2xl:text-[3.8rem] 3xl:text-[4.6rem] 4xl:text-[5.4rem] text-Sur-White w-full sm:w-7/12 h-fit "
         >
           Invest in{" "}
           <span className="font-semibold text-L-Primary">real-estate</span> with
@@ -81,7 +81,7 @@ United Kingdom
             duration: 1,
             type: "keyframes",
           }}
-          className="absolute w-5/12 3xl:w-6/12  flex flex-col mt-10 xl:mt-20 2xl:mt-24 4xl:mt-48 justify-between gap-3"
+          className="absolute w-11/12 sm:w-5/12 3xl:w-6/12  flex flex-col mt-10 xl:mt-20 2xl:mt-24 4xl:mt-48 justify-between gap-3"
         >
           <p className="text-Sur-White text-lg xl:text-[1.5rem] 2xl:text-[1.65rem] 3xl:text-4xl 4xl:text-5xl font-medium">
             Your gateway to smarter co-ownership and seamless property
@@ -105,7 +105,7 @@ United Kingdom
           loop
           autoPlay
           muted
-          className="w-full min-h-screen md:min-h-full object-cover"
+          className="w-full min-h-screen  md:min-h-full object-cover"
         ></video>
      
       </div>
