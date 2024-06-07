@@ -29,7 +29,7 @@ const Cards = () => {
       viewport={{ once: false, amount: 0.5 }} 
       transition={{ duration: 0.5 }} 
       key={index} className='w-4/12 h-[36rem] m-5 xl:m-7 2xl:m-9 3xl:m-12 4xl:m-14'>
-      <a href="#" className="group relative block bg-black overflow-hidden rounded-lg">
+      <a href="#" className="group relative block bg-black overflow-hidden rounded-xl">
         <div className="w-full h-full">
           <Image
             alt=""
@@ -39,7 +39,7 @@ const Cards = () => {
         </div>
         <div className="relative p-4 sm:p-6 lg:p-8">
        
-          <div className="mt-32 sm:mt-48 lg:mt-64 bg-[#22343AE5] transform transition-all duration-300 ease-in-out translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 rounded-lg">
+          <div className="mt-32 sm:mt-48 lg:mt-64 bg-[#22343AE5] transform transition-all duration-300 ease-in-out translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 rounded-xl">
             <div className="flex justify-between px-3 py-4">
               <section>
                 <p className='text-Sur-White text-xl font-medium'>{e.title}</p>

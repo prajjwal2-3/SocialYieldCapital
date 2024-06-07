@@ -5,7 +5,8 @@ import {motion} from 'framer-motion'
 import coder from "../../public/coderrrr.svg";
 const Hero = () => {
   return (
-    <div className="">
+    <div className="h-full" >
+      
       <section className="w-full z-40 h-fit absolute p-16 my-8 xl:my-10 2xl:my-12 3xl:my-16 4xl:my-20">
         <motion.div 
           animate={{
@@ -37,19 +38,17 @@ const Hero = () => {
           </section>
         </div>
       </section>
-      {/* <Image 
-        src={coder} 
-        alt="" 
-        className=" w-full" 
-        priority
-      /> */}
-      <video
-        src="https://player.vimeo.com/progressive_redirect/playback/927173841/rendition/1080p/file.mp4?loc=external&amp;log_user=0&amp;signature=8773f924456bcf52f0bdd4e992db6863de1a63ec930f3a45d7fee3d5a77e745b"
-        loop
-        autoPlay
-        muted
-        className="w-full"
-      ></video>
+      <div className="relative flex flex-col items-center">
+  <div className="w-full bg-black/50 absolute h-full"></div>
+  <video
+    src="https://player.vimeo.com/progressive_redirect/playback/927173841/rendition/1080p/file.mp4?loc=external&log_user=0&signature=8773f924456bcf52f0bdd4e992db6863de1a63ec930f3a45d7fee3d5a77e745b"
+    loop
+    autoPlay
+    muted
+    className="w-full aspect-video"
+  ></video>
+</div>
+
     </div>
   );
 };

@@ -37,12 +37,12 @@ const Header = () => {
        `}
     >
       <p
-        className={`text-3xl font-bold text-Sur-White`}
+        className={`text-3xl font-bold text-L-Primary`}
       >
         SYC
       </p>
       <div
-        className={`w-5/12 justify-center items-center h-11 gap-5 flex text-Sur-White`}
+        className={`md:w-5/12 justify-center items-center h-11 gap-5 flex text-L-Primary`}
       >
         <button className="">
           <Link href="/">Home</Link>
