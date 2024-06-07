@@ -10,26 +10,7 @@ const config = {
 	],
   prefix: "",
   theme: {
-    colors:{
-      transparent: 'transparent',
-      current: 'currentColor',
-      "Brand/Primary":"#507B8B",
-      "black":"#000000",
-      "Brand/Light":"#8aa7b1",
-      "Brand/Dark":"#395763",
-      "Sur-Gradient":"#507b8b",
-      "Sur-White":"#ffffff",
-      "Border":"#538586",
-      "Sur-light-100":"#f6f8f9",
-      "Sur-light-200":"#e3eaec",
-      "Sur-light-300":"#D3DEE2",
-      "Sur-light-400":"#C4D2D8",
-      "Primary":"#e6e6e6",
-      "L-Primary":"#1c2b31",
-      "L-Secondary":"#6b7579",
-      "D-Primary":"#ffffff",
-      "D-Secondary":"#C9D6D8"
-    },
+    
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
@@ -56,47 +37,55 @@ const config = {
         '3xl': '1700px',
         '4xl':'2000px'
       },
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+      colors:{
+        transparent: 'transparent',
+        current: 'currentColor',
+        "Brand/Primary":"#507B8B",
+        "black":"#000000",
+        "Brand/Light":"#8aa7b1",
+        "Brand/Dark":"#395763",
+        "Sur-Gradient":"#507b8b",
+        "Sur-White":"#ffffff",
+        "Border":"#538586",
+        "Sur-light-100":"#f6f8f9",
+        "Sur-light-200":"#e3eaec",
+        "Sur-light-300":"#D3DEE2",
+        "Sur-light-400":"#C4D2D8",
+        "Primary":"#e6e6e6",
+        "L-Primary":"#1c2b31",
+        "L-Secondary":"#6b7579",
+        "D-Primary":"#ffffff",
+        "D-Secondary":"#C9D6D8"
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
+      
       keyframes: {
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
+        "spin-around": {
+          "0%": {
+            transform: "translateZ(0) rotate(0)",
+          },
+          "15%, 35%": {
+            transform: "translateZ(0) rotate(90deg)",
+          },
+          "65%, 85%": {
+            transform: "translateZ(0) rotate(270deg)",
+          },
+          "100%": {
+            transform: "translateZ(0) rotate(360deg)",
+          },
+        },
+        slide: {
+          to: {
+            transform: "translate(calc(100cqw - 100%), 0)",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -115,6 +104,9 @@ const config = {
         },
       },
       animation: {
+        shimmer: "shimmer 2s linear infinite",
+        "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
+        slide: "slide var(--speed) ease-in-out infinite alternate",
         fadeIn: 'fadeIn 1s ease-in-out forwards',
         fadeOut: 'fadeOut 1s ease-in-out forwards',
         "accordion-down": "accordion-down 0.2s ease-out",
