@@ -2,6 +2,8 @@ import React from 'react'
 import about from '../../public/aboutphoto.svg'
 import Image from 'next/image'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
+
 const About = () => {
   return (
     <div className='py-24 px-14 xl:px-24 flex gap-10 justify-between '>
@@ -16,9 +18,21 @@ Offering co-ownership in carefully selected properties, enabling accessible and 
         <ArrowForwardIcon fontSize='small' className='text-[#507B8B]'/>
         </button>
       </section>
-      <section className='w-4/12 flex items-center justify-center'>
-        <Image src={about} alt=''/>
-      </section>
+      
+      <CardContainer className="inter-var">
+      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+       
+        <CardItem translateZ="100" className="w-full ">
+          <Image
+            src={about}
+           
+            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            alt="thumbnail"
+          />
+        </CardItem>
+        
+      </CardBody>
+    </CardContainer>
     </div>
   )
 }

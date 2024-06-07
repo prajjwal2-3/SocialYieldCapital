@@ -1,0 +1,123 @@
+export const reviews = [
+    {
+      name: "Michael",
+      username: "@michael",
+      body: "Investing with Social Yield Capital has been a game-changer for me. Their expertise is unparalleled.",
+      img: "https://avatar.vercel.sh/michael",
+    },
+    {
+      name: "Samantha",
+      username: "@samantha",
+      body: "I am thoroughly impressed with the returns I've seen. Social Yield Capital knows what they're doing.",
+      img: "https://avatar.vercel.sh/samantha",
+    },
+    {
+      name: "David",
+      username: "@david",
+      body: "Social Yield Capital made the investment process smooth and profitable. Highly recommended.",
+      img: "https://avatar.vercel.sh/david",
+    },
+    {
+      name: "Lisa",
+      username: "@lisa",
+      body: "The team at Social Yield Capital is knowledgeable and professional. I've seen great results.",
+      img: "https://avatar.vercel.sh/lisa",
+    },
+    {
+      name: "Chris",
+      username: "@chris",
+      body: "I've never had such a positive experience with a real estate investment firm before. Social Yield Capital is top-notch.",
+      img: "https://avatar.vercel.sh/chris",
+    },
+    {
+      name: "Anna",
+      username: "@anna",
+      body: "Social Yield Capital has exceeded my expectations. Their strategies are effective and lucrative.",
+      img: "https://avatar.vercel.sh/anna",
+    },
+    {
+      name: "Brian",
+      username: "@brian",
+      body: "Choosing Social Yield Capital was the best decision I've made for my investment portfolio.",
+      img: "https://avatar.vercel.sh/brian",
+    },
+    {
+      name: "Emily",
+      username: "@emily",
+      body: "Their customer service is exceptional. Social Yield Capital truly cares about their clients.",
+      img: "https://avatar.vercel.sh/emily",
+    },
+    {
+      name: "Kevin",
+      username: "@kevin",
+      body: "I am amazed by the consistent returns. Social Yield Capital is the real deal.",
+      img: "https://avatar.vercel.sh/kevin",
+    },
+    {
+      name: "Olivia",
+      username: "@olivia",
+      body: "Social Yield Capital offers unparalleled expertise and fantastic returns. Highly recommended.",
+      img: "https://avatar.vercel.sh/olivia",
+    },
+    {
+      name: "Matthew",
+      username: "@matthew",
+      body: "The insights and advice from Social Yield Capital have been invaluable for my investments.",
+      img: "https://avatar.vercel.sh/matthew",
+    },
+    {
+      name: "Natalie",
+      username: "@natalie",
+      body: "I've seen significant growth in my investments since partnering with Social Yield Capital.",
+      img: "https://avatar.vercel.sh/natalie",
+    },
+    {
+      name: "Daniel",
+      username: "@daniel",
+      body: "Social Yield Capital's approach to real estate investment is innovative and highly effective.",
+      img: "https://avatar.vercel.sh/daniel",
+    },
+    {
+      name: "Sophia",
+      username: "@sophia",
+      body: "The returns from Social Yield Capital have been beyond my expectations. Truly impressive.",
+      img: "https://avatar.vercel.sh/sophia",
+    },
+    {
+      name: "James",
+      username: "@james",
+      body: "Social Yield Capital provides clear and reliable investment strategies. I'm very satisfied.",
+      img: "https://avatar.vercel.sh/james",
+    },
+    {
+      name: "Chloe",
+      username: "@chloe",
+      body: "Their transparency and professionalism set Social Yield Capital apart from the rest.",
+      img: "https://avatar.vercel.sh/chloe",
+    },
+    {
+      name: "Anthony",
+      username: "@anthony",
+      body: "Investing with Social Yield Capital has been a rewarding experience. Great returns and support.",
+      img: "https://avatar.vercel.sh/anthony",
+    },
+    {
+      name: "Grace",
+      username: "@grace",
+      body: "I appreciate the personalized investment advice and excellent results from Social Yield Capital.",
+      img: "https://avatar.vercel.sh/grace",
+    },
+    {
+      name: "Joshua",
+      username: "@joshua",
+      body: "Social Yield Capital has transformed my investment strategy with their expertise and insights.",
+      img: "https://avatar.vercel.sh/joshua",
+    },
+    {
+      name: "Mia",
+      username: "@mia",
+      body: "The level of service and returns from Social Yield Capital is outstanding. Highly recommended.",
+      img: "https://avatar.vercel.sh/mia",
+    },
+  ];
+  
