@@ -26,7 +26,7 @@ Offering co-ownership in carefully selected properties, enabling accessible and 
           <Image
             src={about}
            
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            className=" w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
         </CardItem>
