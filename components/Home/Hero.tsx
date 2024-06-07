@@ -2,7 +2,6 @@
 import React from "react";
 
 import {motion} from 'framer-motion'
-import coder from "../../public/coderrrr.svg";
 const Hero = () => {
   return (
     <div className="h-full" >
@@ -11,7 +10,7 @@ const Hero = () => {
         <motion.div 
           animate={{
             opacity:[0,1],
-            y:[80,0]
+            y:[-110,0]
            }}
            transition={{
             duration:1,
@@ -22,7 +21,16 @@ const Hero = () => {
           Social yield capital
         </motion.div>
      
-        <div className="absolute w-5/12 3xl:w-6/12  flex flex-col mt-10 xl:mt-20 2xl:mt-24 4xl:mt-48 justify-between gap-3">
+        <motion.div
+        animate={{
+          opacity:[0,1],
+          y:[110,0]
+         }}
+         transition={{
+          duration:1,
+          type:"keyframes"
+         }}
+        className="absolute w-5/12 3xl:w-6/12  flex flex-col mt-10 xl:mt-20 2xl:mt-24 4xl:mt-48 justify-between gap-3">
           <p className="text-Sur-White text-lg xl:text-[1.5rem] 2xl:text-[1.65rem] 3xl:text-4xl 4xl:text-5xl font-medium">
             Your gateway to smarter co-ownership and seamless property
             management, all under the trusted guardianship of the UKs finest
@@ -36,7 +44,7 @@ const Hero = () => {
               Who are we
             </button>
           </section>
-        </div>
+        </motion.div>
       </section>
       <div className="relative flex flex-col items-center">
   <div className="w-full bg-black/30 absolute h-full"></div>
