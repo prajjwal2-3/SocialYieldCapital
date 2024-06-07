@@ -29,17 +29,17 @@ const Hero = () => {
             real estate innovators.
           </p>
           <section className="w-10/12 flex gap-4 3xl:gap-8">
-            <button className="w-fit bg-[#1C2B31] hover:bg-transparent border-Sur-White border font-medium rounded-full p-[12px_20px] 3xl:p-[20px_28px] 4xl:p-[28px_36px] 4xl:text-xl text-Sur-White">
+            <button className="w-fit bg-[#1C2B31]  hover:bg-Brand/Dark font-medium rounded-full p-[12px_20px] 3xl:p-[20px_28px] 4xl:p-[28px_36px] 4xl:text-xl text-Sur-White">
               Start Investing
             </button>
-            <button className="w-fit border-Sur-White hover:bg-L-Primary border rounded-full p-[12px_20px] 3xl:p-[20px_28px] 4xl:p-[28px_36px] 4xl:text-xl text-Sur-White font-medium">
+            <button className="w-fit border-Sur-White  border rounded-full p-[12px_20px] 3xl:p-[20px_28px] 4xl:p-[28px_36px] 4xl:text-xl text-Sur-White font-medium">
               Who are we
             </button>
           </section>
         </div>
       </section>
       <div className="relative flex flex-col items-center">
-  <div className="w-full bg-black/50 absolute h-full"></div>
+  <div className="w-full bg-black/30 absolute h-full"></div>
   <video
     src="https://player.vimeo.com/progressive_redirect/playback/927173841/rendition/1080p/file.mp4?loc=external&log_user=0&signature=8773f924456bcf52f0bdd4e992db6863de1a63ec930f3a45d7fee3d5a77e745b"
     loop
