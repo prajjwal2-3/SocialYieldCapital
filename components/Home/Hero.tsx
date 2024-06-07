@@ -105,8 +105,9 @@ United Kingdom
           loop
           autoPlay
           muted
-          className="w-full aspect-video"
+          className="w-full min-h-screen md:min-h-full object-cover"
         ></video>
+     
       </div>
     </div>
   );

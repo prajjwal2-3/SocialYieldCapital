@@ -83,10 +83,10 @@ const Card = () => {
 ];
   return (
 
-  <div className="flex flex-wrap justify-center items-center p-10">
+  <div className=" grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center p-10">
    
    {arr.map((e,index)=>
-   <Link href='/view' key={index} className="w-3/12 m-6 shadow-xl h-fit bg-Sur-White rounded-lg hover:scale-105 duration-300 transition-transform ease-in-out">
+   <Link href='/view' key={index} className=" m-6 shadow-xl h-fit bg-Sur-White rounded-lg hover:scale-105 duration-300 transition-transform ease-in-out">
  <div  className="">
 
 <div className="h-48">
