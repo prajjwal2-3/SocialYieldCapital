@@ -85,7 +85,7 @@ const Header = () => {
       </div>
       <DropdownMenu >
       <DropdownMenuTrigger asChild className="block sm:hidden">
-        <Button><ArrowDropDownIcon/></Button>
+        <Button className="outline-none"><ArrowDropDownIcon/></Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 bg-white">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
