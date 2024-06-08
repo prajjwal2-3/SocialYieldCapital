@@ -27,7 +27,7 @@ const Home = () => {
         </section>
       <Cards/>
       </div>
-      <Col/>
+      {/* <Col/> */}
       <Review2/>
    
     </div>

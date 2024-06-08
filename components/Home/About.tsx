@@ -6,8 +6,8 @@ import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 
 const About = () => {
   return (
-    <div className='py-24 px-14 xl:px-24 flex gap-10 justify-between '>
-      <section className='w-8/12 flex flex-col 2xl:gap-5 items-start p-3'>
+    <div className='py-24 px-6 md:px-14 xl:px-24 flex flex-col md:flex-row gap-10 justify-between '>
+      <section className='md:w-8/12 flex flex-col 2xl:gap-5 items-start p-3'>
         <p className='text-xl 3xl:text-[1.5rem] 4xl:text-[2rem] font-medium text-[#507B8B]'>Who we are</p>
         <p className='text-4xl 3xl:text-5xl 4xl:text-6xl font-semibold '>Welcome to 
         <span className='text-4xl 3xl:text-5xl 4xl:text-6xl font-semibold text-[#507B8B] px-2'>Social Yield Capital</span>
@@ -20,7 +20,7 @@ Offering co-ownership in carefully selected properties, enabling accessible and 
       </section>
       
       <CardContainer className="inter-var">
-      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto h-auto rounded-xl p-6 border  ">
        
         <CardItem translateZ="100" className="w-full ">
           <Image

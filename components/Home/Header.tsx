@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button"
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -84,57 +85,42 @@ const Header = () => {
       </div>
       <DropdownMenu >
       <DropdownMenuTrigger asChild className="block sm:hidden">
-        <Button variant="outline">Open</Button>
+        <Button><ArrowDropDownIcon/></Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 bg-white">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuGroup>
-          <DropdownMenuItem>
-            Profile
-            <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            Billing
-            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            Settings
-            <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            Keyboard shortcuts
-            <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
-        <DropdownMenuSeparator />
-        <DropdownMenuGroup>
-          <DropdownMenuItem>Team</DropdownMenuItem>
-          <DropdownMenuSub>
-            <DropdownMenuSubTrigger>Invite users</DropdownMenuSubTrigger>
-            <DropdownMenuPortal>
-              <DropdownMenuSubContent>
-                <DropdownMenuItem>Email</DropdownMenuItem>
-                <DropdownMenuItem>Message</DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>More...</DropdownMenuItem>
-              </DropdownMenuSubContent>
-            </DropdownMenuPortal>
-          </DropdownMenuSub>
-          <DropdownMenuItem>
-            New Team
-            <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>GitHub</DropdownMenuItem>
-        <DropdownMenuItem>Support</DropdownMenuItem>
-        <DropdownMenuItem disabled>API</DropdownMenuItem>
+        
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          Log out
-          <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+        <button className={`${path==='/'?'border-b-2 ':''}`}>
+          <Link href="/">Home</Link>
+        </button>
         </DropdownMenuItem>
+        <DropdownMenuItem>
+        <button className="">About us</button>
+        </DropdownMenuItem>
+         <DropdownMenuItem>
+        <button className={path==='/properties'?'border-b-2 border-Brand/Primary':''}>
+          <Link href="/properties">Properties</Link>
+        </button>
+        </DropdownMenuItem>
+        <DropdownMenuGroup className="flex flex-col gap-3">
+        {user ? (
+          <LogoutLink className="w-full text-center py-2 bg-Brand/Primary hover:bg-Brand/Dark px-4 rounded-full text-Sur-White">
+            Logout
+          </LogoutLink>
+        ) : (
+          <>
+            <RegisterLink className="w-full text-center py-2 bg-Brand/Primary hover:bg-Brand/Dark px-4 rounded-full text-Sur-White">
+              Sign up
+            </RegisterLink>
+            <LoginLink className="w-full text-center py-2 bg-Brand/Primary hover:bg-Brand/Dark px-4 rounded-full text-Sur-White">
+              Sign in
+            </LoginLink>
+          </>
+        )}
+        </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
     </div>
