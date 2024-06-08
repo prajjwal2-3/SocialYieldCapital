@@ -1,5 +1,6 @@
 import React from 'react'
-import about from '../../public/aboutphoto.svg'
+import about from '../../public/about.svg'
+import about2 from '../../public/about2.svg'
 import Image from 'next/image'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
@@ -20,18 +21,23 @@ Offering co-ownership in carefully selected properties, enabling accessible and 
       </section>
       
       <CardContainer className="inter-var">
-      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto h-auto rounded-xl p-6 border  ">
-       
-        <CardItem translateZ="100" className="w-full ">
+      <CardBody className=" relative group/card dark:border-white/[0.2] border-black/[0.1] bg-gray-50 border dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black  w-auto h-auto rounded-xl   ">
+       <CardItem className='absolute w-full'>
+       <Image src={about} alt='' className='w-full object-cover rounded-xl group-hover/card:shadow-xl '/>
+       </CardItem>
+        <CardItem translateZ="100" className="w-full  relative">
+        
           <Image
-            src={about}
+            src={about2}
            
             className=" w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
+         
         </CardItem>
-        
+       
       </CardBody>
+      
     </CardContainer>
     </div>
   )
