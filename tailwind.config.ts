@@ -75,6 +75,14 @@ const config = {
             backgroundPosition: "-200% 0",
           },
         },
+        shimmer2: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "200% 0",
+          },
+        },
         "spin-around": {
           "0%": {
             transform: "translateZ(0) rotate(0)",
@@ -115,6 +123,7 @@ const config = {
         marquee: "marquee 60s linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         shimmer: "shimmer 2s linear infinite",
+        shimmer2:"shimmer2 2s linear infinite",
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
         slide: "slide var(--speed) ease-in-out infinite alternate",
         fadeIn: 'fadeIn 1s ease-in-out forwards',

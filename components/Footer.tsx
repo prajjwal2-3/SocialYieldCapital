@@ -13,10 +13,10 @@ const Footer = () => {
 to the next level.</p>
 <p className='font-medium text-xl md:w-5/12 w-8/12 text-D-Secondary'>Discover the exclusive benefits of our co-ownership model, designed to elevate your portfolio through premium property investments with accessible entry points.</p>
 <section className="md:w-5/12 justify-center items-center flex gap-4 3xl:gap-8">
-            <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-full text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
+            <button className="inline-flex h-12 animate-shimmer hover:animate-shimmer2 items-center justify-center rounded-xl text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
               Contact Us
             </button>
-            <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-full text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
+            <button className="inline-flex h-12 animate-shimmer hover:animate-shimmer2 items-center justify-center rounded-xl text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
               Sign Up
             </button>
           </section>

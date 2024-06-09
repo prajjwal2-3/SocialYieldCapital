@@ -6,6 +6,7 @@ import About from './About'
 import CustomizedAccordions from './Accordian'
 import Accordianbg from './Accordianbg'
 import Cards from './Cards'
+import About2 from '../About'
 import Col from './Col'
 import Review2 from './Review2'
 import SvgComponent from './Footersvg'
@@ -27,6 +28,7 @@ const Home = () => {
         </section>
       <Cards/>
       </div>
+      <About2/>
       {/* <Col/> */}
       <Review2/>
    

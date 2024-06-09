@@ -58,26 +58,28 @@ const Header = () => {
         SYC
       </p>
       <div
-        className={`  text-lg hidden  items-center h-11 gap-5 sm:flex ${path==='/view'?'text-Sur-White':'text-L-Primary'}`}
+        className={`  text-lg hidden justify-center  items-center h-11 gap-5 sm:flex ${path==='/view'?'text-Sur-White':'text-L-Primary'}`}
       >
         <button className={`${path==='/'?'border-b-2 ':''}`}>
           <Link href="/">Home</Link>
         </button>
         <button className="">About us</button>
+        <button className="">Our team</button>
         <button className={path==='/properties'?'border-b-2 border-Brand/Primary':''}>
           <Link href="/properties">Properties</Link>
         </button>
-
+        </div>
+<div className="hidden sm:flex gap-5">
         {user ? (
-          <LogoutLink className="w-fit text-center py-2 bg-Brand/Primary hover:bg-Brand/Dark px-4 rounded-full text-Sur-White">
+          <LogoutLink className="inline-flex h-12 animate-shimmer hover:animate-shimmer2 items-center justify-center rounded-xl text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
             Logout
           </LogoutLink>
         ) : (
           <>
-            <RegisterLink className="w-fit text-center py-2 bg-Brand/Primary hover:bg-Brand/Dark px-4 rounded-full text-Sur-White">
+            <RegisterLink className="inline-flex h-12 animate-shimmer hover:animate-shimmer2 items-center justify-center rounded-xl text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
               Sign up
             </RegisterLink>
-            <LoginLink className="w-fit text-center py-2 bg-Brand/Primary hover:bg-Brand/Dark px-4 rounded-full text-Sur-White">
+            <LoginLink className="inline-flex h-12 animate-shimmer hover:animate-shimmer2 items-center justify-center rounded-xl text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
               Sign in
             </LoginLink>
           </>
@@ -107,15 +109,15 @@ const Header = () => {
         </DropdownMenuItem>
         <DropdownMenuGroup className="flex flex-col gap-3">
         {user ? (
-          <LogoutLink className="w-full text-center py-2 bg-Brand/Primary hover:bg-Brand/Dark px-4 rounded-full text-Sur-White">
+          <LogoutLink className="inline-flex h-12 animate-shimmer items-center justify-center rounded-xl text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
             Logout
           </LogoutLink>
         ) : (
           <>
-            <RegisterLink className="w-full text-center py-2 bg-Brand/Primary hover:bg-Brand/Dark px-4 rounded-full text-Sur-White">
+            <RegisterLink className="inline-flex h-12 animate-shimmer items-center justify-center rounded-xl text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
               Sign up
             </RegisterLink>
-            <LoginLink className="w-full text-center py-2 bg-Brand/Primary hover:bg-Brand/Dark px-4 rounded-full text-Sur-White">
+            <LoginLink className="inline-flex h-12 animate-shimmer items-center justify-center rounded-xl text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
               Sign in
             </LoginLink>
           </>
