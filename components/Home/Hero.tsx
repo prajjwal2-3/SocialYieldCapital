@@ -63,7 +63,7 @@ const Hero = () => {
           className="text-[2.4rem] xl:text-[2.6rem] 2xl:text-[3.8rem] 3xl:text-[4.6rem] 4xl:text-[5.4rem] text-Sur-White w-full sm:w-7/12 h-fit "
         >
           Invest in{" "}
-          <span className="font-semibold text-L-Primary">real-estate</span> with
+          <span className="font-semibold text-L-Primary">real-estate</span> with<br/>
           Social yield capital
         </motion.div>
         <div className="flex gap-2">
