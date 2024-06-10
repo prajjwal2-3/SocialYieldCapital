@@ -63,7 +63,9 @@ const Header = () => {
         <button className={`${path==='/'?'border-b-2 ':''}`}>
           <Link href="/">Home</Link>
         </button>
-        <button className="">About us</button>
+        <button className={path==='/AboutUs'?'border-b-2 border-Brand/Primary':''}>
+          <Link href="/AboutUs">About us</Link>
+        </button>
         <button className="">Our team</button>
         <button className={path==='/properties'?'border-b-2 border-Brand/Primary':''}>
           <Link href="/properties">Properties</Link>
