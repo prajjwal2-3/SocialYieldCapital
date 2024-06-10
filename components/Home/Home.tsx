@@ -19,8 +19,9 @@ const Home = () => {
      
       <Hero/>
       <Sub/>
-      <About/>
-      <Accordianbg/>
+     
+      <About2/>
+            <Accordianbg/>
       <div className="p-10">
         <section>
           <p className='text-xl font-medium text-[#507B8B]'>Properties</p>
@@ -28,8 +29,7 @@ const Home = () => {
         </section>
       <Cards/>
       </div>
-      <About2/>
-      {/* <Col/> */}
+  
       <Review2/>
    
     </div>

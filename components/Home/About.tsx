@@ -4,9 +4,10 @@ import about2 from '../../public/about2.svg'
 import Image from 'next/image'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
-
+import About2 from '../About'
 const About = () => {
   return (
+   <>
     <div className='py-24 px-6 md:px-14 xl:px-24 flex flex-col md:flex-row gap-10 justify-between '>
       <section className='md:w-8/12 flex flex-col 2xl:gap-5 items-start p-3'>
         <p className='text-xl 3xl:text-[1.5rem] 4xl:text-[2rem] font-medium text-[#507B8B]'>Who we are</p>
@@ -40,6 +41,8 @@ Offering co-ownership in carefully selected properties, enabling accessible and 
       
     </CardContainer>
     </div>
+    
+   </>
   )
 }
 

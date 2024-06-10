@@ -9,7 +9,7 @@ const Hero = () => {
 
 
   return (
-    <div className="h-full">
+    <div className="h-full ">
       <section className="w-full  z-40 h-fit absolute p-6 sm:p-16 my-28 sm:my-10 2xl:my-12 3xl:my-16 4xl:my-20">
         <motion.div
           animate={{
@@ -66,7 +66,7 @@ const Hero = () => {
           </section>
         </motion.div>
       </section>
-      <div className="relative flex flex-col items-center">
+      <div className="relative flex  flex-col items-center">
         <div className="w-full bg-black/30 absolute h-full"></div>
         <video
           src="https://player.vimeo.com/progressive_redirect/playback/927173841/rendition/1080p/file.mp4?loc=external&log_user=0&signature=8773f924456bcf52f0bdd4e992db6863de1a63ec930f3a45d7fee3d5a77e745b"
