@@ -5,6 +5,8 @@ import auto1 from "../../public/auto1.svg";
 import auto2 from "../../public/auto2.svg";
 import auto3 from "../../public/auto3.svg";
 import { styled } from "@mui/material/styles";
+import BoxReveal from "@/components/magicui/box-reveal";
+import { Button } from "@/components/ui/button";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
 import MuiAccordionSummary, {
@@ -71,7 +73,40 @@ const Accordianbg = () => {
 
   return (
     <div className="flex items-center justify-start">
-      <div className="absolute w-full bg-L-Primary/50 h-[31rem] flex items-center justify-start">
+      <div className="absolute w-full bg-L-Primary/50 h-[38rem] flex items-center justify-start">
+      <div className="h-full w-full max-w-[32rem] items-center justify-center overflow-hidden pt-8">
+      <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+        <p className="text-[3.5rem] font-semibold">
+          Magic UI<span className="text-[#5046e6]">.</span>
+        </p>
+      </BoxReveal>
+ 
+      <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+        <h2 className="mt-[.5rem] text-[1rem]">
+          UI library for{" "}
+          <span className="text-[#5046e6]">Design Engineers</span>
+        </h2>
+      </BoxReveal>
+ 
+      <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+        <div className="mt-[1.5rem]">
+          <p>
+            -&gt; 20+ free and open-source animated components built with
+            <span className="font-semibold text-[#5046e6]"> React</span>,
+            <span className="font-semibold text-[#5046e6]"> Typescript</span>,
+            <span className="font-semibold text-[#5046e6]"> Tailwind CSS</span>,
+            and
+            <span className="font-semibold text-[#5046e6]"> Framer Motion</span>
+            . <br />
+            -&gt; 100% open-source, and customizable. <br />
+          </p>
+        </div>
+      </BoxReveal>
+ 
+      <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+        <Button className="mt-[1.6rem] bg-[#5046e6]">Explore</Button>
+      </BoxReveal>
+    </div>
         <div className=" bg-transparent md:w-5/12">
           {arr.map((e, index) => (
             <Accordion
@@ -104,7 +139,7 @@ const Accordianbg = () => {
       <Image
         src={images[currentImageIndex]}
         alt="Auto changing image"
-        className="w-full object-cover h-[31rem] "
+        className="w-full object-cover h-[38rem] "
       />
     </div>
   );
