@@ -5,13 +5,14 @@ import about2 from "../public/about2.svg";
 import Image from "next/image";
 import BlurIn from "../components/magicui/blur-in";
 import BoxReveal from "@/components/magicui/box-reveal";
+import WordPullUp from "./magicui/word-pull-up";
 const About = () => {
   return (
     <>
       <div className="bg-L-Primary p-2 md:p-20  flex flex-col justify-center gap-5 items-center">
-        <BlurIn
-          word="Who we are"
-          className="text-4xl font-bold text-white dark:text-white"
+        <WordPullUp
+          words="Who we are"
+      
         />
         <div className="bg-white sticky flex flex-col md:flex-row  top-[4rem] md:top-[8rem] shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)] w-full sm:w-11/12 h-[30rem] md:h-[32rem] m-0 md:m-5 rounded-3xl ">
           <section className="md:w-7/12 3xl:w-8/12 gap-4 flex flex-col p-6 md:p-10">
