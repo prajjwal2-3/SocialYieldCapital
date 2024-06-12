@@ -14,7 +14,7 @@ const About = () => {
           words="Who we are"
       
         />
-        <div className="bg-white sticky flex flex-col md:flex-row  top-[4rem] md:top-[8rem] shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)] w-full sm:w-11/12 h-[30rem] md:h-[32rem] m-0 md:m-5 rounded-3xl ">
+        <div className="bg-white border-opacity-30 backdrop-blur-lg sticky flex flex-col md:flex-row  top-[4rem] md:top-[8rem] shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)] w-full sm:w-11/12 h-[30rem] md:h-[32rem] m-0 md:m-5 rounded-3xl ">
           <section className="md:w-7/12 3xl:w-8/12 gap-4 flex flex-col p-6 md:p-10">
             <BoxReveal boxColor={"#507B8B"} duration={0.5}>
               <p className="text-2xl md:text-4xl font-bold text-L-Primary">
@@ -54,7 +54,7 @@ const About = () => {
             </CardBody>
           </CardContainer>
         </div>
-        <div className="bg-white sticky flex flex-col md:flex-row  top-[6rem] md:top-[10rem] shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)] w-full sm:w-11/12 h-[30rem] md:h-[32rem] m-0 md:m-5 rounded-3xl ">
+        <div className=" border-opacity-30 backdrop-blur-lg  shadow-black/20 sticky flex flex-col md:flex-row  top-[6rem] md:top-[10rem] shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)] w-full sm:w-11/12 h-[30rem] md:h-[32rem] m-0 md:m-5 rounded-3xl ">
           <section className="w-7/12 3xl:w-8/12 gap-4 flex flex-col p-10 shadow-lg">
             <BoxReveal boxColor={"#507B8B"} duration={0.5}>
               <p className="text-4xl font-bold text-L-Primary">Our Mission</p>
@@ -90,7 +90,7 @@ const About = () => {
             </CardBody>
           </CardContainer>
         </div>
-        <div className="bg-white sticky flex flex-col md:flex-row  top-[8rem] md:top-[12rem] shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)] w-full sm:w-11/12 h-[30rem] md:h-[32rem] m-0 md:m-5 rounded-3xl ">
+        <div className=" border-opacity-30 backdrop-blur-lg sticky flex flex-col md:flex-row  top-[8rem] md:top-[12rem] shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)] w-full sm:w-11/12 h-[30rem] md:h-[32rem] m-0 md:m-5 rounded-3xl ">
           <section className="w-7/12 3xl:w-8/12 gap-4 flex flex-col p-10 shadow-lg">
             <BoxReveal boxColor={"#507B8B"} duration={0.5}>
               <p className="text-4xl font-bold text-L-Primary">
@@ -129,7 +129,10 @@ const About = () => {
             </CardBody>
           </CardContainer>
         </div>
-        <div className="bg-white sticky flex flex-col md:flex-row  top-[10rem] md:top-[14rem] shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)] w-full sm:w-11/12 h-[30rem] md:h-[32rem] m-0 md:m-5 rounded-3xl ">
+        <div className=" border-opacity-30 backdrop-blur-lg sticky  md:flex-row  top-[10rem] md:top-[14rem] shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)] w-full sm:w-11/12  m-0 md:m-5 rounded-3xl ">
+          
+        <CardContainer className=" inter-var h-[30rem] md:h-[32rem]">
+        <CardBody className=" relative group/card flex flex-row dark:border-white/[0.2] border-black/[0.1]  border dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black  w-full h-full rounded-3xl   ">
           <section className="w-7/12 3xl:w-8/12 gap-4 flex flex-col p-10 shadow-lg">
             <BoxReveal boxColor={"#507B8B"} duration={0.5}>
               <p className="text-4xl font-bold text-L-Primary">
@@ -148,9 +151,9 @@ const About = () => {
             </BoxReveal>
           </section>
 
-          <CardContainer className=" h-full inter-var">
-            <CardBody className=" relative group/card dark:border-white/[0.2] border-black/[0.1] bg-gray-50 border dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black  w-full h-full rounded-3xl   ">
-              <CardItem className="absolute h-full w-full">
+          
+              <section className="w-6/12">
+              <CardItem className="absolute h-full ">
                 <Image
                   src={about}
                   alt=""
@@ -164,6 +167,7 @@ const About = () => {
                   alt="thumbnail"
                 />
               </CardItem>
+              </section>
             </CardBody>
           </CardContainer>
         </div>
