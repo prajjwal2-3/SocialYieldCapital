@@ -47,7 +47,7 @@ export default function WordPullUp({
           key={i}
           variants={framerProps}
        
-          className="pr-2 text-[4rem] inline-block "
+          className="pr-2 text-[3rem] inline-block "
         >
           {word === "" ? <span>&nbsp;</span> : word}
         </motion.span>

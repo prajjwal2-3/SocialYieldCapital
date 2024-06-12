@@ -53,7 +53,7 @@ const Header = () => {
        `}
     >
       <p
-        className={`text-3xl font-bold ${path==='/view'?'text-':'text-L-Primary'}`}
+        className={`text-3xl font-bold ${path==='/view'?'text-white':'text-white'}`}
       >
         SYC
       </p>

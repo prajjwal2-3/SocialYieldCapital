@@ -20,7 +20,7 @@ const Hero = () => {
             duration: 1,
             type: "keyframes",
           }}
-          className="text-[2.4rem] xl:text-[2.6rem] 2xl:text-[3.8rem] 3xl:text-[4.6rem] 4xl:text-[5.4rem] text-Sur-White flex flex-col w-full md:w-10/12 h-fit "
+          className="text-[2.4rem] xl:text-[2.6rem] 2xl:text-[3.8rem] 3xl:text-[4.6rem] 4xl:text-[5.4rem] text-Sur-White flex flex-col w-full md:w-11/12 h-fit "
         >
           <section className="flex">
           <span>Invest in</span>
