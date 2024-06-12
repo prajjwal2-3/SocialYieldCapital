@@ -21,14 +21,14 @@ const Cards = () => {
     address:'Havering and Redbridge, London'
   }]
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row justify-between">
       {arr.map((e,index)=>
       <motion.div 
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.5 }} 
+      viewport={{ once: false, amount: 0.1 }} 
       transition={{ duration: 0.5 }} 
-      key={index} className='md:w-4/12 md:h-[36rem] m-5 xl:m-7 2xl:m-9 3xl:m-12 4xl:m-14'>
+      key={index} className='md:w-[30%] md:h-[36rem] '>
       <a href="#" className="group relative block bg-black overflow-hidden rounded-xl">
         <div className="w-full h-full">
           <Image

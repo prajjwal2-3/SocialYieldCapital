@@ -22,10 +22,10 @@ const Home = () => {
      
       <About2/>
             <Accordianbg/>
-      <div className="p-10">
-        <section>
+      <div className="px-32 py-24">
+        <section className='gap-9 flex flex-col'>
           <p className='text-xl font-medium text-[#507B8B]'>Properties</p>
-          <p className='text-[#1C2B31] text-4xl font-semibold'>Latest Investment Options</p>
+          <p className='text-[#1C2B31] mb-8 text-4xl font-semibold'>Latest Investment Options</p>
         </section>
       <Cards/>
       </div>

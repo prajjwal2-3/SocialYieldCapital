@@ -46,10 +46,10 @@ const Review2 = () => {
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
   return (
-    <div className='p-10   flex flex-col  bg-white'>
-        <section>
+    <div className='px-32 py-24  flex flex-col  bg-white'>
+        <section className='gap-9 flex flex-col'>
           <p className='text-xl font-medium text-[#507B8B]'>Testimonials</p>
-          <p className='text-[#1C2B31] text-4xl mt-5 font-semibold'>Some words from our clients</p>
+          <p className='text-[#1C2B31] text-4xl mb-8  font-semibold'>Some words from our clients</p>
         </section>
         <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-background ">
       <Marquee pauseOnHover className="[--duration:20s]">
