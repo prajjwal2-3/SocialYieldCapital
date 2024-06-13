@@ -53,12 +53,12 @@ const Header = () => {
        `}
     >
       <p
-        className={`text-3xl font-bold ${path==='/view'?'text-white':'text-white'}`}
+        className={`text-3xl font-bold ${path==='/dashboard'?'text-L-Primary':'text-white'}`}
       >
         SYC
       </p>
       <div
-        className={`  text-lg hidden justify-center  items-center h-11 gap-5 sm:flex ${path==='/view'?'text-Sur-White':'text-white'}`}
+        className={`  text-lg hidden justify-center  items-center h-11 gap-5 sm:flex ${path==='/dashboard'?'text-L-Primary':'text-white'}`}
       >
         <button className={`${path==='/'?'border-b-2 ':''}`}>
           <Link href="/">Home</Link>
@@ -73,13 +73,13 @@ const Header = () => {
         </div>
 <div className="hidden sm:flex gap-5">
         {user ? (
-          <LogoutLink className="inline-flex h-12 animate-shimmer hover:animate-shimmer2 items-center justify-center rounded-xl text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
+          <LogoutLink className="inline-flex h-12 animate-shimmer hover:animate-shimmer2 items-center justify-center rounded-lg text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
             Logout
           </LogoutLink>
         ) : (
           <>
             
-            <LoginLink className="inline-flex h-12 animate-shimmer hover:animate-shimmer2 items-center justify-center rounded-xl text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
+            <LoginLink className="inline-flex h-12 animate-shimmer hover:animate-shimmer2 items-center justify-center rounded-lg text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
               Sign in
             </LoginLink>
           </>
