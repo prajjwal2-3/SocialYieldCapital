@@ -6,6 +6,9 @@ import Image from "next/image";
 import bed from "../../public/bed.svg";
 import house1 from "../../public/house1.svg";
 import Link from "next/link";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 const Dashboard = () => {
   return (
     <div className="pt-20 min-h-screen flex">
@@ -82,13 +85,14 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className=" h-96 p-6 bg-white rounded-lg flex-col justify-start items-start gap-2.5 inline-flex">
+          <div className=" h-96 p-6 bg-white rounded-lg flex-col  gap-2.5 flex justify-between">
             <div className=" pb-4 justify-between items-center inline-flex">
               <div className="text-gray-800 text-lg font-semibold font-['General Sans'] leading-[27px]">
                 Expected Returns
               </div>
               <div className="justify-start items-center gap-1 flex">
-                <button className="text-zinc-700 text-sm font-medium">
+                <button className="text-zinc-700 text-sm font-medium flex">
+                    <KeyboardArrowDownIcon className="text-zinc-700"/>
                   Yearly
                 </button>
                 <div className="w-3.5 h-3.5 relative" />
@@ -144,8 +148,12 @@ const Dashboard = () => {
                 Select Property
               </div>
               <div className="justify-start items-center gap-1.5 flex">
-                <button className="w-8 h-8 rounded-full border border-black/30 justify-center items-center gap-[13.33px] flex"></button>
-                <button className="w-8 h-8 origin-top-left  rounded-full border border-black/30 justify-center items-center gap-[13.33px] flex"></button>
+                <button className="w-8 h-8 rounded-full border border-black/30 justify-center items-center gap-[13.33px] flex">
+                <ArrowBackIosNewIcon fontSize="small"/>
+                </button>
+                <button className="w-8 h-8   rounded-full border border-black/30 justify-center items-center gap-[13.33px] flex">
+                <ArrowForwardIosIcon fontSize="small"/>
+                </button>
               </div>
             </div>
 
