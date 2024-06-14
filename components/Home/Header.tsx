@@ -49,7 +49,7 @@ const Header = () => {
       id="header"
       className={`fixed w-full  h-auto max-h-[86px] md:p-[20px_60px] p-[12px] z-50 gap-0
        flex justify-between items-center
-       ${path==='/view'?'bg-L-Primary':down?'bg-Brand/Primary bg-opacity-30 shadow-lg shadow-black/20   backdrop-blur-sm':'bg-transparent'}
+       ${path==='/view'?'bg-L-Primary':down?'bg-Brand/Primary bg-opacity-30 shadow-lg shadow-black/20   backdrop-blur-sm':'bg-white border-b'}
        `}
     >
       <p
@@ -67,7 +67,7 @@ const Header = () => {
           <Link href="/AboutUs">About us</Link>
         </button>
         <button className="">Our team</button>
-        <button className={path==='/properties'?'border-b-2 border-Brand/Primary':''}>
+        <button className={path==='/properties'||path==='/dashboard'?'border-b-2 border-Brand/Primary':''}>
           <Link href="/properties">Properties</Link>
         </button>
         </div>
