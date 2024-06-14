@@ -9,6 +9,7 @@ const ReviewCard = ({
   name,
   username,
   body,
+  
 }: {
   img: string;
   name: string;
@@ -18,7 +19,7 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        "relative w-72 h-48 cursor-pointer flex flex-col justify-between overflow-hidden rounded-xl border p-4",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
@@ -46,26 +47,28 @@ const Review2 = () => {
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
   return (
-    <div className='px-32 py-24  flex flex-col  bg-white'>
-        <section className='gap-9 flex flex-col'>
-          <p className='text-xl font-medium text-[#507B8B]'>Testimonials</p>
-          <p className='text-[#1C2B31] text-4xl mb-8  font-semibold'>Some words from our clients</p>
-        </section>
-        <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-background ">
-      <Marquee pauseOnHover className="[--duration:20s]">
+    <>
+    <div className="text-6xl font-bold text-L-Primary text-center mb-10">Some words from our clients</div>
+    <div className="relative flex h-[40rem] flex-row items-center justify-center overflow-hidden rounded-lg  bg-background sm:px-20 md:shadow-xl">
+      <Marquee pauseOnHover vertical className="[--duration:30s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
+      <Marquee reverse pauseOnHover vertical className="[--duration:30s]">
         {secondRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+      <Marquee pauseOnHover vertical className="[--duration:30s]">
+        {firstRow.map((review) => (
+          <ReviewCard key={review.username} {...review} />
+        ))}
+      </Marquee>
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white dark:from-background"></div>
     </div>
-    </div>
+    </>
   )
 }
 
