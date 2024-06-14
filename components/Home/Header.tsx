@@ -49,16 +49,16 @@ const Header = () => {
       id="header"
       className={`fixed w-full  h-auto max-h-[86px] md:p-[20px_60px] p-[12px] z-50 gap-0
        flex justify-between items-center
-       ${path==='/view'?'bg-L-Primary':down?'bg-Brand/Primary bg-opacity-30 shadow-lg shadow-black/20   backdrop-blur-sm':'bg-white border-b'}
+       ${path==='/view'?'bg-L-Primary':down?'bg-Brand/Primary bg-opacity-30 shadow-lg shadow-black/20   backdrop-blur-sm':'bg-transparent '}
        `}
     >
       <p
-        className={`text-3xl font-bold ${path==='/dashboard'?'text-L-Primary':'text-white'}`}
+        className={`text-3xl font-bold ${path==='/dashboard'||path==='/Home'?'text-L-Primary':'text-white'}`}
       >
         SYC
       </p>
       <div
-        className={`  text-lg hidden justify-center  items-center h-11 gap-5 sm:flex ${path==='/dashboard'?'text-L-Primary':'text-white'}`}
+        className={`  text-lg hidden justify-center  items-center h-11 gap-5 sm:flex ${path==='/dashboard'||path==='/Home'?'text-L-Primary':'text-white'}`}
       >
         <button className={`${path==='/'?'border-b-2 ':''}`}>
           <Link href="/">Home</Link>

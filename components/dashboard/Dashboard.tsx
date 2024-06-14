@@ -11,7 +11,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 const Dashboard = () => {
   return (
-    <div className="pt-20 min-h-screen flex">
+    <div className="pt-20 min-h-screen flex flex-row-reverse">
       <div className="w-2/12 h-fit p-6 bg-white flex-col justify-start items-start gap-7  border-t border-black/20' inline-flex">
         <div className=" h-fit p-4 rounded-lg border border-neutral-200 flex-col justify-start items-start gap-1.5 flex">
           <p className="text-gray-800 text-sm font-semibold font-['General Sans'] leading-[21px]">
@@ -61,7 +61,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="bg-Sur-light-200 w-10/12 p-10 flex gap-10">
+      <div className="bg-Sur-light-200 w-10/12 p-10 flex flex-row-reverse gap-10">
         <div className="flex flex-col gap-8 w-8/12">
           <div className=" h-fit p-6 bg-white rounded-lg flex-col  gap-6 w-full flex">
             <div className="w-full flex-col justify-start items-start gap-1 flex">
