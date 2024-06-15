@@ -106,7 +106,7 @@ const AboutusPage = () => {
             </div>
         </div>
     </div>
-    <div className="self-stretch h-[427px] justify-start items-start gap-6 inline-flex">
+    {/* <div className="self-stretch h-[427px] justify-start items-start gap-6 inline-flex">
         <div className="grow shrink basis-0 self-stretch flex-col justify-start items-start gap-2 inline-flex">
            <Image src={emily} alt=''/>
             <div className="self-stretch h-[58px] flex-col justify-start items-start gap-1 flex">
@@ -128,7 +128,7 @@ const AboutusPage = () => {
                 <div className="text-zinc-500 text-base font-medium font-['General Sans'] leading-normal">Director of Community Outreach</div>
             </div>
         </div>
-    </div>
+    </div> */}
 </div>
 <div className="w-full h-[1028px] px-[120px] py-[50px] bg-white flex-col justify-center items-center gap-[60px] inline-flex">
     <div className="self-stretch h-[98px] flex-col justify-start items-start gap-6 flex">

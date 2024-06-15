@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import Hero from './Hero'
 import Sub from './Sub'
-import About from './About'
+
 import CustomizedAccordions from './Accordian'
 import Accordianbg from './Accordianbg'
 import Cards from './Cards'
