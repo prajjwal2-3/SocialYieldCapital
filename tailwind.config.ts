@@ -33,6 +33,9 @@ const config = {
       
     },
     extend: {
+      backgroundColor: {
+        'custom-color': 'rgba(227, 234, 236, var(--tw-bg-opacity))',
+      },
       screens: {
         '3xl': '1700px',
         '4xl':'2000px'

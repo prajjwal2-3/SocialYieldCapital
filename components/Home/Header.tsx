@@ -53,17 +53,17 @@ const Header = () => {
        `}
     >
       <p
-        className={`text-3xl font-bold ${path==='/dashboard'||path==='/Home'?'text-L-Primary':'text-white'}`}
+        className={`text-3xl font-bold ${path==='/AboutUs'|| path==='/dashboard' || path==='/properties'?'  text-L-Primary':'text-white'}`}
       >
         SYC
       </p>
       <div
-        className={`  text-lg hidden justify-center  items-center h-11 gap-5 sm:flex ${path==='/dashboard'||path==='/Home'?'text-L-Primary':'text-white'}`}
+        className={`  text-lg hidden justify-center  items-center h-11 gap-5 sm:flex ${path==='/AboutUs'|| path==='/dashboard' || path==='/properties'?'  text-L-Primary':'text-white'}`}
       >
         <button className={`${path==='/'?'border-b-2 ':''}`}>
           <Link href="/">Home</Link>
         </button>
-        <button className={path==='/AboutUs'?'border-b-2 border-Brand/Primary':''}>
+        <button className={path==='/AboutUs'?'border-b-2 border-Brand/Primary ':''}>
           <Link href="/AboutUs">About us</Link>
         </button>
         <button className="">Our team</button>

@@ -11,9 +11,10 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 const Dashboard = () => {
   return (
-    <div className="pt-20 min-h-screen flex flex-row-reverse">
-      <div className="w-2/12 h-fit p-6 bg-white flex-col justify-start items-start gap-7  border-t border-black/20' inline-flex">
-        <div className=" h-fit p-4 rounded-lg border border-neutral-200 flex-col justify-start items-start gap-1.5 flex">
+    <div className="pt-20 min-h-screen flex flex-row-reverse ">
+      <div className=" h-fit w-1/5 bg-Sur-light-200 p-7 flex flex-row-reverse  gap-10">
+      <div className=" p-6 flex-col rounded-lg justify-start items-start bg-white gap-7  border-t border-black/20' inline-flex">
+        <div className=" h-fit p-4 rounded-lg border  border-neutral-200 flex-col justify-start items-start gap-1.5 flex">
           <p className="text-gray-800 text-sm font-semibold font-['General Sans'] leading-[21px]">
             Ask a question
           </p>
@@ -21,7 +22,7 @@ const Dashboard = () => {
             Our ai agent & team can help
           </p>
         </div>
-        <div className=" h-fit p-4 rounded-lg border border-neutral-200 flex-col justify-start items-start gap-6 flex">
+        <div className=" h-fit p-4 rounded-lg border  border-neutral-200 flex-col justify-start items-start gap-6 flex">
           <div className=" h-fit p-3 bg-white rounded-lg border border-neutral-200 justify-between items-center inline-flex">
             <div className="grow shrink basis-0 h-[21px] justify-between items-center flex">
               <div className="text-zinc-500 text-sm font-medium font-['General Sans'] leading-[21px]">
@@ -32,32 +33,33 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className=" h-fit flex-col justify-start items-start gap-4 flex">
-            <div className=" px-3 py-2 justify-start items-center gap-1.5 inline-flex">
+          <div className="  h-fit flex-col justify-start items-start gap-4 flex">
+            <div className="bg-white rounded-lg px-3 py-2 justify-start items-center gap-1.5 inline-flex">
               <div className="text-zinc-500 text-sm font-medium font-['General Sans'] leading-[21px]">
                 How to invest on syc
               </div>
             </div>
-            <div className=" px-3 py-1 justify-start items-center gap-1.5 inline-flex">
+            <div className=" px-3 bg-white rounded-lg py-1 justify-start items-center gap-1.5 inline-flex">
               <div className="text-zinc-500 text-sm font-medium font-['General Sans'] leading-[21px]">
                 What are the steps to invest
               </div>
             </div>
-            <div className=" px-3 py-1 justify-start items-center gap-1.5 inline-flex">
+            <div className=" px-3 py-1 bg-white rounded-lg justify-start items-center gap-1.5 inline-flex">
               <div className="text-zinc-500 text-sm font-medium font-['General Sans'] leading-[21px]">
                 How much return i can get
               </div>
             </div>
-            <div className=" px-3 py-1 justify-start items-center gap-1.5 inline-flex">
+            <div className=" px-3 py-1 bg-white rounded-lg justify-start items-center gap-1.5 inline-flex">
               <div className="text-zinc-500 text-sm font-medium font-['General Sans'] leading-[21px]">
                 How to invest on syc
               </div>
             </div>
-            <div className=" px-3 py-1 justify-start items-center gap-1.5 inline-flex">
+            <div className=" px-3 py-1 bg-white rounded-lg justify-start items-center gap-1.5 inline-flex">
               <div className="text-zinc-500 text-sm font-medium font-['General Sans'] leading-[21px]">
                 What are the steps to invest
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>

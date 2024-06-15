@@ -27,7 +27,7 @@ const AboutusPage = () => {
     </div>
 </div>
 <Image  src={frame251} alt='' className='w-full'/>
-<div className="w-full h-fit px-[120px] py-[100px] bg-white flex-col justify-start items-start gap-6 inline-flex">
+<div className="w-full h-fit px-[120px] py-[100px] bg-white flex-col  justify-start items-start gap-6 inline-flex">
     <div className="self-stretch justify-start items-center gap-[60px] inline-flex">
         <div className="grow shrink basis-0 flex-col justify-center items-start gap-10 inline-flex">
             <div className="self-stretch h-[49px] flex-col justify-center items-start gap-8 flex">
