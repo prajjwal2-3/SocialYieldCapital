@@ -11,6 +11,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { property } from "@/constants/properties";
+import GradientChart from "./GradientChart";
 const Dashboard = () => {
   const initialProperty =  {
     "id": 1,
@@ -22,6 +23,7 @@ const Dashboard = () => {
     },
     "price": 75000,
     "roi_percentage": 9,
+    "data": [30, 25, 13, 50, 50, 56, 67,72,40,90],
     "description": "Charming studio apartment in the heart of Glasgow's city center. Ideal for students or young professionals. Features include a compact living area, kitchenette, and a communal garden.",
     "amenities": ["Communal Garden", "Secure Entry System"],
     "nearby_facilities": ["Public Transport", "Universities", "Shopping Centers"],
@@ -60,6 +62,7 @@ interface Property {
   description: string;
   amenities: string[];
   nearby_facilities: string[];
+  data:number[]
   features: Features;
   image_url: string;
 }
@@ -87,7 +90,27 @@ interface PropertyList {
 .then((response) => {
   setsearching(false)
   setarr(response.data)
-  handleSelectProperty(response.data[0])
+  if (response.data.length === 0) {
+    console.error('No data available to select');
+    return;
+  }
+
+  let selectedElement;
+
+  if (response.data.length === 1) {
+    // Only one element, select the first element
+ handleSelectProperty(response.data[0])
+  } else if (response.data.length === 2) {
+    // Two elements, randomly select between 0th and 1st element
+    const randomIndex = Math.floor(Math.random() * 2); // Generates 0 or 1
+    handleSelectProperty(response.data[randomIndex])
+  } else if (response.data.length >= 3) {
+    // Three or more elements, randomly select one element
+    const randomIndex = Math.floor(Math.random() * 3);
+    handleSelectProperty(response.data[randomIndex]) // Generates 0, 1, or 2
+   
+  }
+  
   console.log(JSON.stringify(response.data));
 })
 .catch((error) => {
@@ -209,8 +232,9 @@ interface PropertyList {
                 <div className="w-3.5 h-3.5 relative" />
               </div>
             </div>
-            <div className="w-full h-full">
-              <BasicArea />
+            <div className="w-full h-5/6 flex items-center justify-center">
+              <GradientChart datapoint={prop?.data || []}/>
+             
             </div>
           </div>
           <div className=" h-[153.99px] p-6 bg-white rounded-lg justify-start items-start gap-2.5 inline-flex">
