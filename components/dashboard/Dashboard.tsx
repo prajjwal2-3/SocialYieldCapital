@@ -94,20 +94,17 @@ interface PropertyList {
     console.error('No data available to select');
     return;
   }
-
-  let selectedElement;
-
   if (response.data.length === 1) {
-    // Only one element, select the first element
+   
  handleSelectProperty(response.data[0])
   } else if (response.data.length === 2) {
-    // Two elements, randomly select between 0th and 1st element
-    const randomIndex = Math.floor(Math.random() * 2); // Generates 0 or 1
+  
+    const randomIndex = Math.floor(Math.random() * 2); 
     handleSelectProperty(response.data[randomIndex])
   } else if (response.data.length >= 3) {
-    // Three or more elements, randomly select one element
+   
     const randomIndex = Math.floor(Math.random() * 3);
-    handleSelectProperty(response.data[randomIndex]) // Generates 0, 1, or 2
+    handleSelectProperty(response.data[randomIndex]) 
    
   }
   
@@ -126,7 +123,11 @@ interface PropertyList {
     } else {
       setprop(property);
     }
+
   };
+  function other(){
+    handleSelectProperty((prop?.id?? 0) + 1)
+  }
   function getPropertyById(id:any) {
     // Find the property with the matching ID in the properties array
     let foundProperty = property.properties.find(prop => prop.id === id);
@@ -283,10 +284,14 @@ interface PropertyList {
                 Select Property
               </div>
               <div className="justify-start items-center gap-1.5 flex">
-                <button className="w-8 h-8 rounded-full border border-black/30 justify-center items-center gap-[13.33px] flex">
+                <button onClick={()=>{
+                  handleSelectProperty((prop?.id?? 0) - 1)
+                }} className="w-8 h-8 rounded-full border border-black/30 justify-center items-center gap-[13.33px] flex">
                 <ArrowBackIosNewIcon fontSize="small"/>
                 </button>
-                <button className="w-8 h-8   rounded-full border border-black/30 justify-center items-center gap-[13.33px] flex">
+                <button onClick={()=>{
+                  handleSelectProperty((prop?.id?? 0) + 1)
+                }} className="w-8 h-8   rounded-full border border-black/30 justify-center items-center gap-[13.33px] flex">
                 <ArrowForwardIosIcon fontSize="small"/>
                 </button>
               </div>
@@ -339,7 +344,7 @@ interface PropertyList {
             <div className="w-full h-[42px] px-4 py-3 rounded-lg border border-black/20 justify-center items-center gap-2.5 inline-flex">
               <button className="text-gray-800 text-base font-medium font-['General Sans']">
               
-                <Link href="/view">
+                <Link href={`/view/${prop?.id}`}>
                 Go to the property page
                 </Link>
               </button>
