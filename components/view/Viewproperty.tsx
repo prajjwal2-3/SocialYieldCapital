@@ -65,7 +65,7 @@ const Viewproperty = () => {
      
       <div className="px-14 -mt-14 flex gap-2 pb-5 w-full justify-center items-center">
        
-        <img src={property.properties[Number(viewId)-1].image_url} alt="" className="w-7/12" />
+        <img src={property.properties[Number(viewId)-1].image_url} alt="" className="w-7/12 h-[600px] object-cover" />
 
         <div className="flex flex-wrap justify-center items-center w-5/12 gap-2">
           <Image src={pic1} alt="" className="" />

@@ -138,7 +138,7 @@ interface PropertyList {
   return (
     <div className="pt-20 min-h-screen bg-Sur-light-200 flex flex-row-reverse ">
      
-      <div className="bg-white flex flex-col gap-10 mt-10 mr-5 rounded-lg h-fit p-5">
+      <div className="bg-white flex flex-col gap-10 mt-10 mr-5 rounded-lg h-screen p-5">
       <div className=" h-fit p-4 rounded-lg border  border-neutral-200 flex-col justify-start items-start gap-1.5 flex">
           <p className="text-gray-800 text-sm font-semibold font-['General Sans'] leading-[21px]">
             Ask a question
@@ -190,7 +190,7 @@ interface PropertyList {
       </div>
        
       <div className="bg-Sur-light-200 w-10/12 p-10 flex flex-row-reverse gap-10">
-        <div className="flex flex-col gap-8 w-8/12">
+        <div className="flex flex-col gap-4 h-screen w-8/12">
           <div className=" h-fit p-6 bg-white rounded-lg flex-col  gap-6 w-full flex">
             <div className="w-full flex-col justify-start items-start gap-1 flex">
               <div className="text-gray-800 text-lg font-semibold font-['General Sans'] leading-[27px]">
@@ -278,7 +278,7 @@ interface PropertyList {
           </div>
         </div>
         <div className="w-4/12">
-          <div className="w-full h-fit p-6 bg-white rounded-lg flex-col justify-start items-start gap-6 inline-flex">
+          <div className="w-full h-screen p-6 bg-white rounded-lg flex-col justify-start items-start gap-6 inline-flex">
             <div className=" justify-between items-center w-full  flex">
               <div className="text-gray-800 text-lg font-semibold font-['General Sans'] leading-[27px]">
                 Select Property
@@ -297,7 +297,7 @@ interface PropertyList {
               </div>
             </div>
 
-            <img src={prop?.image_url} alt="" className="rounded-xl w-full h-full" />
+            <img src={prop?.image_url} alt="" className="rounded-xl w-full h-[250px]" />
 
             <div className=" h-[50px] flex-col justify-start items-start gap-1.5 flex">
               <div className="w-fit text-gray-800 text-lg font-semibold font-['General Sans'] leading-normal">
