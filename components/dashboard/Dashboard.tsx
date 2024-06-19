@@ -1,15 +1,116 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import BasicArea from "./Chart";
 import vector from "../../public/Vector2.svg";
 import Image from "next/image";
 import bed from "../../public/bed.svg";
 import house1 from "../../public/house1.svg";
 import Link from "next/link";
+import axios from 'axios'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import { property } from "@/constants/properties";
 const Dashboard = () => {
+  const initialProperty =  {
+    "id": 1,
+    "name": "Cosy Studio Apartment",
+    "location": {
+      "city": "Glasgow",
+      "area": "City Centre",
+      "address": "5 Central Street, Glasgow G1 1AA"
+    },
+    "price": 75000,
+    "roi_percentage": 9,
+    "description": "Charming studio apartment in the heart of Glasgow's city center. Ideal for students or young professionals. Features include a compact living area, kitchenette, and a communal garden.",
+    "amenities": ["Communal Garden", "Secure Entry System"],
+    "nearby_facilities": ["Public Transport", "Universities", "Shopping Centers"],
+    "features": {
+      "bedroom": 1,
+      "kitchen": 1,
+      "bathroom": 1
+    },
+    "image_url": "https://res.cloudinary.com/dzkldv06d/image/upload/v1718758559/phil-hearing-IYfp2Ixe9nM-unsplash_y1edh1.jpg"
+  }
+  const [inputText,setinputText]=useState('')
+  const [arr,setarr]=useState([1])
+  const [searching,setsearching]=useState(false)
+  const [prop,setprop]=useState<Property | null>(initialProperty || null);
+  // Define the Location interface
+interface Location {
+  city: string;
+  area: string;
+  address: string;
+}
+
+// Define the Features interface
+interface Features {
+  bedroom: number;
+  kitchen: number;
+  bathroom: number;
+}
+
+// Define the Property interface
+interface Property {
+  id: number;
+  name: string;
+  location: Location;
+  price: number;
+  roi_percentage: number;
+  description: string;
+  amenities: string[];
+  nearby_facilities: string[];
+  features: Features;
+  image_url: string;
+}
+
+// Define the main PropertyList interface
+interface PropertyList {
+  properties: Property[];
+}
+  let data = JSON.stringify({
+    "inputText": inputText
+  });
+  
+  let config = {
+    method: 'post',
+    maxBodyLength: Infinity,
+    url: 'https://wordent-be.vercel.app/sum/property',
+    headers: { 
+      'Content-Type': 'application/json'
+    },
+    data : data
+  };
+  function search(){
+    setsearching(true)
+    axios.request(config)
+.then((response) => {
+  setsearching(false)
+  setarr(response.data)
+  handleSelectProperty(response.data[0])
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  setsearching(false)
+  console.log(error);
+});
+  }
+  let id = arr[0]
+  const handleSelectProperty = (id: number) => {
+    const property = getPropertyById(id);
+    if (typeof property === 'string') {
+      console.error(property); // Handle the error case
+    } else {
+      setprop(property);
+    }
+  };
+  function getPropertyById(id:any) {
+    // Find the property with the matching ID in the properties array
+    let foundProperty = property.properties.find(prop => prop.id === id);
+    
+    // If the property is found, return it; otherwise, return a message
+    return foundProperty ? foundProperty : `No property found with ID: ${id}`;
+  }
   return (
     <div className="pt-20 min-h-screen bg-Sur-light-200 flex flex-row-reverse ">
      
@@ -23,14 +124,15 @@ const Dashboard = () => {
           </p>
         </div>
         <div className=" h-fit p-4 rounded-lg border  border-neutral-200 flex-col justify-start items-start gap-6 flex">
-          <div className=" h-fit p-3 bg-white rounded-lg border border-neutral-200 justify-between items-center inline-flex">
+          <div className=" h-fit  bg-white rounded-lg  justify-center items-center flex">
             <div className="grow shrink basis-0 h-[21px] justify-between items-center flex">
-              <div className="text-zinc-500 text-sm font-medium font-['General Sans'] leading-[21px]">
-                Search for help
-              </div>
-              <div className="w-4 h-4 pl-[1.33px] pr-[3.25px] pt-[2.35px] pb-[1.66px] justify-center items-center flex">
-                <div className="w-[11.42px] h-3 relative flex-col justify-start items-start flex" />
-              </div>
+              <input className="text-zinc-500 text-sm p-3 border border-neutral-200 outline-none rounded-lg mt-3 font-medium font-['General Sans'] leading-[21px]"  
+              
+              placeholder="Search for help"
+              />
+                
+            
+              
             </div>
           </div>
           <div className="  h-fit flex-col justify-start items-start gap-4 flex">
@@ -78,19 +180,26 @@ const Dashboard = () => {
               <input
                 type="text"
                 placeholder="Enter Amount"
-                className=" h-12 p-4 bg-white rounded-lg border w-10/12 border-neutral-200 justify-between items-center flex"
+                onChange={(e)=>{
+                  setinputText(e.target.value)
+                }}
+                className=" h-12 p-4 bg-white rounded-lg border w-10/12 border-neutral-200 outline-none justify-between items-center flex"
               />
-              <div className="w-[75px] px-4 py-3 bg-Brand/Primary h-12 rounded-lg border justify-center items-center gap-2.5 flex">
-                <div className="text-white text-base font-medium font-['General Sans']">
-                  Apply
-                </div>
+              <div className="w-fit px-4 py-3 bg-Brand/Primary h-12 rounded-lg border justify-center items-center gap-2.5 flex">
+                <button onClick={search} className="text-white text-base font-medium font-['General Sans']">
+                  {searching?'searching....':'search'}
+                </button>
+                
               </div>
+              
             </div>
           </div>
           <div className=" h-96 p-6 bg-white rounded-lg flex-col  gap-2.5 flex justify-between">
             <div className=" pb-4 justify-between items-center inline-flex">
-              <div className="text-gray-800 text-lg font-semibold font-['General Sans'] leading-[27px]">
+              <div className="text-gray-800 text-lg flex gap-3 font-semibold font-['General Sans'] leading-[27px]">
                 Expected Returns
+
+                <p className="font-medium">{prop?.roi_percentage} %</p>
               </div>
               <div className="justify-start items-center gap-1 flex">
                 <button className="text-zinc-700 text-sm font-medium flex">
@@ -159,21 +268,27 @@ const Dashboard = () => {
               </div>
             </div>
 
-            <Image src={house1} alt="" className="rounded-xl" />
+            <img src={prop?.image_url} alt="" className="rounded-xl w-full h-full" />
 
             <div className=" h-[50px] flex-col justify-start items-start gap-1.5 flex">
               <div className="w-fit text-gray-800 text-lg font-semibold font-['General Sans'] leading-normal">
-                Coastal Treehouse
+                {prop?.name}
               </div>
               <div className=" text-gray-800 text-sm font-medium font-['General Sans'] leading-[21px]">
-                735 Betty Lane, Incline Village, NV 89451 USA
+                {prop?.location.address}
               </div>
             </div>
             <div className="  gap-4 flex flex-wrap">
               <div className="justify-start items-center gap-3 w-fit flex">
                 <Image src={bed} alt="" />
                 <div className="text-zinc-500 text-base font-medium font-['General Sans'] leading-normal">
-                  3 Bedrooms
+                  {prop?.features.bedroom} Bedrooms
+                </div>
+              </div>
+              <div className="justify-start items-center gap-3 w-fit flex">
+                <Image src={bed} alt="" />
+                <div className="text-zinc-500 text-base font-medium font-['General Sans'] leading-normal">
+                  {prop?.features.kitchen} Kitchen
                 </div>
               </div>
               <div className="justify-start items-center gap-3 w-fit flex">
@@ -185,7 +300,7 @@ const Dashboard = () => {
               <div className="justify-start items-center gap-3 w-fit flex">
                 <Image src={bed} alt="" />
                 <div className="text-zinc-500 text-base font-medium font-['General Sans'] leading-normal">
-                  3 Bathrooms
+                {prop?.features.kitchen} Bathrooms
                 </div>
               </div>
             </div>
@@ -194,8 +309,7 @@ const Dashboard = () => {
                 Description
               </p>
               <p className=" text-zinc-500 text-base font-medium font-['General Sans'] leading-normal">
-                Set amid towering pines on just under a half-acre, Wood Creek
-                offers the best of modern mountain living near Lake Tahoe...
+              {prop?.description}
               </p>
             </div>
             <div className="w-full h-[42px] px-4 py-3 rounded-lg border border-black/20 justify-center items-center gap-2.5 inline-flex">
