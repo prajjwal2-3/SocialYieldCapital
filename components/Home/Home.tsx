@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import Hero from './Hero'
 import Sub from './Sub'
-
+import Hero2 from './Hero2'
 import CustomizedAccordions from './Accordian'
 import Accordianbg from './Accordianbg'
 import Cards from './Cards'
@@ -18,7 +18,8 @@ const Home = () => {
     
   
      
-      <Hero/>
+      
+      <Hero2/>
       <Sub/>
      
       <About2/>
