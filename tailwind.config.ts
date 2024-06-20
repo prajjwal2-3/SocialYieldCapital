@@ -62,6 +62,7 @@ const config = {
       },
       
       keyframes: {
+       
         orbit: {
           "0%": {
               transform: "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
@@ -129,8 +130,18 @@ const config = {
           '0%': { opacity: '1' },
           '100%': { opacity: '0' },
         },
+        zoomIn: {
+          '0%': { transform: 'scale(1)', 'transform-origin': 'top left' },
+          '100%': { transform: 'scale(1.3)', 'transform-origin': 'top left' },
+        },
+        blurTransition: {
+          '0%': { 'backdrop-filter': 'blur(12px)' },
+          '100%': { 'backdrop-filter': 'blur(0px)' },
+        },
       },
       animation: {
+        zoomIn: 'zoomIn 3s cubic-bezier(1, 0, 0, 0.99) forwards ',
+        blurTransition: 'blurTransition 3s cubic-bezier(1, 0, 0, 0.99) forwards ',
         orbit: "orbit calc(var(--duration)*1s) linear infinite",
         marquee: "marquee 60s linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
