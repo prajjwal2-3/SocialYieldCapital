@@ -50,7 +50,7 @@ CHOOSE YOUR <br />DREAM LOCATION
     Start by telling us about your dream second home. 
 Whether its a cottage in the Cotswolds or a modern flat in London,
 
-Select your preferred location, and let's begin the search for a property that fits your lifestyle and aspirations.
+Select your preferred location, and lets begin the search for a property that fits your lifestyle and aspirations.
     </section>
     </section>
   </div>
