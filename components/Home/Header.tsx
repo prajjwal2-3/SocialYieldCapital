@@ -69,7 +69,7 @@ const Header = () => {
         </button>
         <button className="">Our team</button>
         <button className={path==='/properties'||path==='/dashboard'?'border-b-2 border-Brand/Primary':''}>
-          <Link href="/properties">Properties</Link>
+          <Link href="/properties">Our Vision</Link>
         </button>
         </div>
 <div className="hidden sm:flex gap-5">
