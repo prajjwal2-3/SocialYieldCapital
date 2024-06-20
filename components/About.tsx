@@ -48,7 +48,7 @@ CHOOSE YOUR <br />DREAM LOCATION
     </section>
     <section className="w-10/12">
     Start by telling us about your dream second home. 
-Whether it’s a cottage in the Cotswolds or a modern flat in London,
+Whether its a cottage in the Cotswolds or a modern flat in London,
 
 Select your preferred location, and let's begin the search for a property that fits your lifestyle and aspirations.
     </section>
