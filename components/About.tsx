@@ -35,6 +35,7 @@ const About = () => {
     <>
       <div className="flex flex-col md:flex-row">
         <section className="md:w-4/12">
+        
           <Image src={un} alt="" className="w-full object-cover" />
         </section>
         <section className="bg-L-Primary hidden flex-col md:flex text-white w-8/12 gap-10 p-24">
