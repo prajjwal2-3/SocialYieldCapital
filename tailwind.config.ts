@@ -33,6 +33,9 @@ const config = {
       
     },
     extend: {
+      backgroundImage:{
+        "custom":"url('/public/coderrrr.svg')"
+      },
       backgroundColor: {
         'custom-color': 'rgba(227, 234, 236, var(--tw-bg-opacity))',
       },

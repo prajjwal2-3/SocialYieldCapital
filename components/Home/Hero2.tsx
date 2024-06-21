@@ -6,19 +6,23 @@ import hero from '../../public/onlyshar.svg'
 import bg from '../../public/bgsh.svg'
 import Image from "next/image";
 export default function Hero2() {
-    
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
   return (
     <motion.div className="min-h-screen bg-transparent overflow-hidden">
      <motion.section 
        initial={{ backdropFilter: 'blur(12px)' }}
-       animate={{ backdropFilter: 'blur(0px)' }}
+       animate={loaded?{ backdropFilter: 'blur(0px)' }:{}}
        transition={{ duration: 3, ease: [1, 0, 0, 0.99], }}
      className="w-full absolute h-screen bg-black/20 z-10 "></motion.section>
 
      <div className=" h-screen w-full absolute overflow-hidden z-10">
      <motion.section
      initial={{ scale: 1, originX: 0, originY: 0 }}
-     animate={{ scale: 1.3, originX: 0, originY: 0 }}
+     animate={loaded?{ scale: 1.3, originX: 0, originY: 0 }:{}}
      transition={{ duration: 3, ease: [1, 0, 0, 0.99] }}
      className="h-screen w-full  overflow-hidden">
   <Image priority src={hero} alt="" className="w-full h-full object-cover object-left-top "/>
@@ -39,7 +43,7 @@ export default function Hero2() {
         <motion.p
           className=" h-fit w-full  text-[13rem] p-0 m-0 font-extrabold text-white/60  text-left"
           initial={{ x: 0 }}
-          animate={{ x: +1700 } }
+          animate={loaded?{ x: +1700 }:{} }
           transition={{
           
             repeatType:"loop",
@@ -52,7 +56,7 @@ export default function Hero2() {
         <motion.p
           className=" h-fit w-full  text-[13rem] p-0 m-0 font-extrabold text-white/60  text-right"
           initial={{ x: 0 }}
-          animate={{ x: -1700 } }
+          animate={loaded?{ x: -1700 }:{} }
           transition={{
             
             repeatType:"loop",
@@ -67,7 +71,7 @@ export default function Hero2() {
       <section className="absolute z-20 pt-20 px-10">
       <motion.p
         initial={{ y: -500,opacity:0 }}
-        animate={{ y: 0,opacity:1 } }
+        animate={loaded?{ y: 0,opacity:1 } :{}}
         transition={{
           
           repeatType:"loop",
