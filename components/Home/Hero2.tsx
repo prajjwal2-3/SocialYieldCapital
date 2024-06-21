@@ -12,12 +12,12 @@ export default function Hero2() {
     setLoaded(true);
   }, []);
   return (
-    <motion.div className="min-h-screen bg-transparent overflow-hidden">
+    <motion.div className="h-screen hidden sm:block bg-transparent overflow-hidden">
      <motion.section 
        initial={{ backdropFilter: 'blur(12px)' }}
        animate={loaded?{ backdropFilter: 'blur(0px)' }:{}}
        transition={{ duration: 3, ease: [1, 0, 0, 0.99], }}
-     className="w-full absolute h-screen bg-black/20 z-10 "></motion.section>
+     className="w-full absolute h-screen bg-black/20 z-20 "></motion.section>
 
      <div className=" h-screen w-full absolute overflow-hidden z-10">
      <motion.section

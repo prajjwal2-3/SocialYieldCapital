@@ -21,7 +21,7 @@ const Cards = () => {
     address:'Havering and Redbridge, London'
   }]
   return (
-    <div className="flex flex-col md:flex-row justify-between">
+    <div className="flex flex-col md:flex-row w-full gap-5 justify-between">
       {arr.map((e,index)=>
       <motion.div 
       initial={{ opacity: 0, y: 80 }}
@@ -29,7 +29,7 @@ const Cards = () => {
       viewport={{ once: false, amount: 0.1 }} 
       transition={{ duration: 0.5 }} 
       key={index} className='md:w-[30%] md:h-[36rem] '>
-      <a href="#" className="group relative block bg-black overflow-hidden rounded-xl">
+      <a  className="group relative block bg-black overflow-hidden rounded-xl">
         <div className="w-full h-full">
           <Image
             alt=""

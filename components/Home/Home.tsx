@@ -27,7 +27,7 @@ const Home = () => {
    
     <About2/>
           {/* <Accordianbg/> */}
-    <div className="px-32 pt-24 pb-8">
+    <div className="md:px-32 px-6 pt-24 pb-8 flex flex-col justify-center items-center text-center">
       <section className='gap-9 flex flex-col'>
         <p className='text-xl font-medium text-[#507B8B]'>Properties</p>
         <p className='text-[#1C2B31] mb-8 text-4xl font-semibold'>Latest Investment Options</p>

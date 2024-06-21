@@ -34,11 +34,11 @@ const About = () => {
   }]
   return (
     <>
-  <div className="flex ">
-    <section className="w-4/12">
+  <div className="flex flex-col md:flex-row">
+    <section className="md:w-4/12">
     <Image src={un} alt='' className="w-full object-cover"/>
     </section>
-    <section className="bg-L-Primary flex flex-col text-white w-8/12 gap-10 p-24">
+    <section className="bg-L-Primary  flex-col hidden  md:flex text-white w-8/12 gap-10 p-24">
     <section className="flex gap-5 items-center">
       <p className="text-white/60">HOW IT WORKS</p>
       <Divider className="bg-white w-8/12"/>
@@ -54,7 +54,8 @@ Select your preferred location, and lets begin the search for a property that fi
     </section>
     </section>
   </div>
-    <div className="flex flex-wrap md:h-[36rem]">
+    <div className="flex flex-col md:flex-row h-[36rem]">
+      
     {arr.map((e, index) => (
   <section key={index} className="w-3/12 group relative  overflow-hidden">
     <div className="z-10 w-full h-full absolute bg-black/50 transition-transform duration-300 transform group-hover:bg-transparent"></div>

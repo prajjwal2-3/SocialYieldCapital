@@ -19,7 +19,7 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative w-72 h-48 cursor-pointer flex flex-col justify-between overflow-hidden rounded-xl border p-4",
+        "relative w-48 sm:w-72 h-48 cursor-pointer flex flex-col justify-between overflow-hidden rounded-xl border p-4",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
@@ -48,7 +48,7 @@ const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
   return (
     <>
-    <div className="text-6xl font-bold text-L-Primary text-center mb-10">Some words from our clients</div>
+    <div className="text-4xl md:text-6xl font-bold text-L-Primary text-center mb-10">Some words from our clients</div>
     <div className="relative flex h-[40rem] flex-row items-center justify-center overflow-hidden rounded-lg  bg-background sm:px-20 md:shadow-xl">
       <Marquee pauseOnHover vertical className="[--duration:30s]">
         {firstRow.map((review) => (
@@ -60,7 +60,7 @@ const secondRow = reviews.slice(reviews.length / 2);
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <Marquee pauseOnHover vertical className="[--duration:30s]">
+      <Marquee pauseOnHover vertical className="[--duration:30s] hidden sm:block">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
