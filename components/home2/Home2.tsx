@@ -1,21 +1,11 @@
+import Sub from '../Home/Sub'
 import React from 'react'
-import Header from './Header'
-import Hero from './Hero'
-import Sub from './Sub'
-import Hero2 from './Hero2'
-import CustomizedAccordions from './Accordian'
-import Accordianbg from './Accordianbg'
-import Cards from './Cards'
-import About2 from '../About'
-import Col from './Col'
-import Review2 from './Review2'
-import { ParallaxScrollDemo } from './Review3'
-import SvgComponent from './Footersvg'
-
-const Home = () => {
+import Cards from '../Home/Cards'
+import Hero2 from '../Home/Hero'
+import Review2 from '../Home/Review2'
+import About from '../About'
+export default function Home2() {
   return (
-    <>
-    
     <div className=''>
    
   
@@ -24,7 +14,7 @@ const Home = () => {
     <Hero2/>
     <Sub/>
    
-    <About2/>
+    <About/>
           {/* <Accordianbg/> */}
     <div className="px-32 pt-24 pb-8">
       <section className='gap-9 flex flex-col'>
@@ -37,8 +27,5 @@ const Home = () => {
     <Review2/>
  
   </div>
-    </>
   )
 }
-
-export default Home

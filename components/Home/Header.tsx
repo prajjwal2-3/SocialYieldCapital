@@ -56,7 +56,7 @@ const Header = () => {
       <p
         className={`text-3xl font-bold ${path==='/AboutUs'|| path==='/dashboard' || path==='/properties'?'  text-L-Primary':'text-white'}`}
       >
-        SYC
+      <Link href="/">SYC</Link>
       </p>
       <div
         className={`  text-lg hidden justify-center  items-center h-11 gap-5 sm:flex ${path==='/AboutUs'|| path==='/dashboard' || path==='/properties'?'  text-L-Primary':'text-white'}`}
@@ -70,6 +70,9 @@ const Header = () => {
         <button className="">Our team</button>
         <button className={path==='/properties'||path==='/dashboard'?'border-b-2 border-Brand/Primary':''}>
           <Link href="/properties">Our Vision</Link>
+        </button>
+        <button className={path==='/properties'||path==='/dashboard'?'border-b-2 border-Brand/Primary':''}>
+          <Link href="/home2">Home 2</Link>
         </button>
         </div>
 <div className="hidden sm:flex gap-5">
