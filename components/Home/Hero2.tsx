@@ -43,7 +43,7 @@ export default function Hero2() {
         <motion.p
           className=" h-fit w-full  text-[13rem] p-0 m-0 font-extrabold text-white/60  text-left"
           initial={{ x: 0 }}
-          animate={loaded?{ x: +1700 }:{} }
+          animate={loaded?{ x: +5000 }:{} }
           transition={{
           
             repeatType:"loop",
@@ -56,7 +56,7 @@ export default function Hero2() {
         <motion.p
           className=" h-fit w-full  text-[13rem] p-0 m-0 font-extrabold text-white/60  text-right"
           initial={{ x: 0 }}
-          animate={loaded?{ x: -1700 }:{} }
+          animate={loaded?{ x: -5000 }:{} }
           transition={{
             
             repeatType:"loop",

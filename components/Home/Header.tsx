@@ -74,6 +74,9 @@ const Header = () => {
         <button className={path==='/properties'||path==='/dashboard'?'border-b-2 border-Brand/Primary':''}>
           <Link href="/home2">Home 2</Link>
         </button>
+        <button className={path==='/properties'||path==='/dashboard'?'border-b-2 border-Brand/Primary':''}>
+          <Link href="/home3">Home 3</Link>
+        </button>
         </div>
 <div className="hidden sm:flex gap-5">
         {user ? (
