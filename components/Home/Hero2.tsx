@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
-import hero from '../../public/hero.svg'
+import hero from '../../public/onlyshar.svg'
+import bg from '../../public/bgsh.svg'
 import Image from "next/image";
 export default function Hero2() {
     
@@ -14,13 +15,22 @@ export default function Hero2() {
        transition={{ duration: 3, ease: [1, 0, 0, 0.99], }}
      className="w-full absolute h-screen bg-black/20 z-10 "></motion.section>
 
-     <div className=" h-screen w-full absolute overflow-hidden">
+     <div className=" h-screen w-full absolute overflow-hidden z-10">
      <motion.section
      initial={{ scale: 1, originX: 0, originY: 0 }}
      animate={{ scale: 1.3, originX: 0, originY: 0 }}
      transition={{ duration: 3, ease: [1, 0, 0, 0.99] }}
      className="h-screen w-full  overflow-hidden">
   <Image priority src={hero} alt="" className="w-full h-full object-cover object-left-top "/>
+</motion.section>
+     </div>
+     <div className=" h-screen w-full absolute overflow-hidden z-0">
+     <motion.section
+    //  initial={{ scale: 1, originX: 0, originY: 0 }}
+    //  animate={{ scale: 1.3, originX: 0, originY: 0 }}
+    //  transition={{ duration: 3, ease: [1, 0, 0, 0.99] }}
+     className="h-screen w-full  overflow-hidden">
+  <Image priority src={bg} alt="" className="w-full h-full object-cover object-left-top "/>
 </motion.section>
      </div>
 
