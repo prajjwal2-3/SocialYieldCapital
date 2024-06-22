@@ -35,7 +35,19 @@ const About = () => {
     <>
       <div className="flex flex-col md:flex-row">
         <section className="md:w-4/12">
-        
+        <section className="bg-transparent  flex-col flex md:hidden text-white w-8/12 gap-10 p-24">
+          <div className="flex gap-5 items-center">
+            <p className="text-white/60">HOW IT WORKS</p>
+            <Divider className="bg-white w-8/12" />
+          </div>
+          <h2 className="font-medium text-4xl">
+            CHOOSE YOUR <br /> DREAM LOCATION
+          </h2>
+          <p className="w-10/12">
+            Start by telling us about your dream second home. Whether it's a cottage in the Cotswolds or a modern flat in London,
+            select your preferred location, and let's begin the search for a property that fits your lifestyle and aspirations.
+          </p>
+        </section>
           <Image src={un} alt="" className="w-full object-cover" />
         </section>
         <section className="bg-L-Primary hidden flex-col md:flex text-white w-8/12 gap-10 p-24">

@@ -20,21 +20,34 @@ to the next level.</p>
           </section>
     </div>
     <div className='bg-L-Primary p-[15px_50px] xl:p-[60px_200px] gap-5 h-fit  flex flex-col justify-around'>
-      <div className="flex flex-wrap justify-center items-center gap-4">
-      <p className='text-3xl font-bold  text-Sur-White'>
+      <div className="lg:flex hidden flex-row items-center gap-4">
+      <p className='text-3xl w-3/12 font-bold text-center text-Sur-White'>
         SYC
-     </p>
-      <section className='flex md:gap-6 text-L-Secondary text-xs md:text-base'>
+     </p> 
+      <section className=' w-5/12  text-L-Secondary text-center text-xs md:text-base'>
         © 2024 Social Yield Capital. All Rights Reserved. 
         </section>
-        <section className='flex flex-row gap-6 text-Sur-White'>
+        <section className='flex w-4/12 text-center flex-row gap-6 text-Sur-White'>
             <button className='text-right'>About us</button>
             <button className='text-right'>Properties</button>
             <button className='text-right'>Contact us</button>
            
         </section>
       </div>
-      
+      <div className="flex flex-wrap lg:hidden items-center justify-between">
+      <p className='text-3xl w-2/12 font-bold text-center text-Sur-White'>
+        SYC
+     </p> 
+      <section className=' w-8/12  text-L-Secondary text-center text-xs md:text-base'>
+        © 2024 Social Yield Capital. All Rights Reserved. 
+        </section>
+        <section className='flex w-full justify-center items-center text-center flex-row gap-6 text-Sur-White'>
+            <button className='text-right'>About us</button>
+            <button className='text-right'>Properties</button>
+            <button className='text-right'>Contact us</button>
+           
+        </section>
+      </div>
       
     </div>
     </>
