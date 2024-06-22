@@ -1,18 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import BasicArea from "./Chart";
 import vector from "../../public/Vector2.svg";
 import Image from "next/image";
 import bed from "../../public/bed.svg";
-import house1 from "../../public/house1.svg";
+import axios from 'axios';
 import Link from "next/link";
-import axios from 'axios'
+import { redirect } from "next/navigation";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { property } from "@/constants/properties";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import GradientChart from "./GradientChart";
-const Dashboard = () => {
+export default async function Dashboard  ()  {
   const initialProperty =  {
     "id": 1,
     "name": "Cosy Studio Apartment",
@@ -34,10 +34,13 @@ const Dashboard = () => {
     },
     "image_url": "https://res.cloudinary.com/dzkldv06d/image/upload/v1718758559/phil-hearing-IYfp2Ixe9nM-unsplash_y1edh1.jpg"
   }
+ 
   const [inputText,setinputText]=useState('')
   const [arr,setarr]=useState([1])
   const [searching,setsearching]=useState(false)
   const [prop,setprop]=useState<Property | null>(initialProperty || null);
+ 
+  
   // Define the Location interface
 interface Location {
   city: string;
@@ -356,4 +359,4 @@ interface PropertyList {
   );
 };
 
-export default Dashboard;
+

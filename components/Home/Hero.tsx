@@ -3,14 +3,11 @@ import React from "react";
 import { AnimatedTooltip } from "../ui/animated-tooltip";
 import { AnimatePresence, motion } from "framer-motion";
 import WordRotate from "../magicui/word-rotate";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 const Hero = () => {
-  
-
-
   return (
-    <div className="h-full ">
-      <section className="w-full  z-40 h-fit absolute  px-[12rem] py-24  my-28 sm:my-10 2xl:my-12 3xl:my-16 4xl:my-20">
+    <div className="md:h-full h-screen ">
+      <section className="w-full  z-40 h-fit absolute px-10 py-20  md:px-[12rem] md:py-24  md:my-28 sm:my-10 2xl:my-12 3xl:my-16 4xl:my-20">
         <motion.div
           animate={{
             opacity: [0, 1],
@@ -22,23 +19,25 @@ const Hero = () => {
           }}
           className="text-[2.4rem] xl:text-[2.6rem] 2xl:text-[3.8rem] 3xl:text-[4.6rem] 4xl:text-[5.4rem] text-Sur-White flex flex-col w-full md:w-11/12 h-fit "
         >
-          <section className="flex">
-          <span>Invest in</span>
-         
-          
-          
-          <WordRotate
-      className="px-4 font-bold text-white dark:text-white"
-      words={["real-estate", "social-housing","properties","commercial-housing","commercial-properties"]}
-    />
-         
-        
-          
+          <section className="flex flex-col md:flex-row">
+            <span>Invest in</span>
+
+            <WordRotate
+              className="md:px-4 font-bold text-white dark:text-white"
+              words={[
+                "real-estate",
+                "social-housing",
+                "properties",
+               
+              ]}
+            />
           </section>
-        <p> with  <span className="font-bold"> Social yield capital </span></p>
-        
+          <p>
+            {" "}
+            with <span className="font-bold"> Social yield capital </span>
+          </p>
         </motion.div>
-       
+
         <motion.div
           animate={{
             opacity: [0, 1],
@@ -65,7 +64,7 @@ const Hero = () => {
           </section>
         </motion.div>
       </section>
-      <div className="relative flex  flex-col items-center">
+      <div className="relative flex   flex-col items-center">
         <div className="w-full bg-black/30 absolute h-full"></div>
         <video
           src="https://player.vimeo.com/progressive_redirect/playback/927173841/rendition/1080p/file.mp4?loc=external&log_user=0&signature=8773f924456bcf52f0bdd4e992db6863de1a63ec930f3a45d7fee3d5a77e745b"
@@ -74,7 +73,6 @@ const Hero = () => {
           muted
           className="w-full min-h-screen  md:min-h-full object-cover"
         ></video>
-     
       </div>
     </div>
   );

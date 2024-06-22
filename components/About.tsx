@@ -44,8 +44,8 @@ const About = () => {
             CHOOSE YOUR <br /> DREAM LOCATION
           </h2>
           <p className="w-10/12">
-            Start by telling us about your dream second home. Whether it's a cottage in the Cotswolds or a modern flat in London,
-            select your preferred location, and let's begin the search for a property that fits your lifestyle and aspirations.
+            Start by telling us about your dream second home. Whether its a cottage in the Cotswolds or a modern flat in London,
+            select your preferred location, and lets begin the search for a property that fits your lifestyle and aspirations.
           </p>
         </section>
           <Image src={un} alt="" className="w-full object-cover" />
@@ -59,8 +59,8 @@ const About = () => {
             CHOOSE YOUR <br /> DREAM LOCATION
           </h2>
           <p className="w-10/12">
-            Start by telling us about your dream second home. Whether it's a cottage in the Cotswolds or a modern flat in London,
-            select your preferred location, and let's begin the search for a property that fits your lifestyle and aspirations.
+            Start by telling us about your dream second home. Whether its a cottage in the Cotswolds or a modern flat in London,
+            select your preferred location, and lets begin the search for a property that fits your lifestyle and aspirations.
           </p>
         </section>
       </div>

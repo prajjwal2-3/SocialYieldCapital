@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button"
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,7 +28,8 @@ import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 const Header = () => {
   const path = usePathname();
-  const { user } = useKindeBrowserClient();
+  const { user} = useKindeBrowserClient();
+  
   var className = "inverted";
   var scrollTrigger = 50;
   const [down, setdown] = useState(false);
@@ -68,21 +70,28 @@ const Header = () => {
           <Link href="/AboutUs">About us</Link>
         </button>
         <button className="">Our team</button>
-        <button className={path==='/properties'||path==='/dashboard'?'border-b-2 border-Brand/Primary':''}>
+        <button className={''}>
           <Link href="/properties">Our Vision</Link>
         </button>
-        <button className={path==='/properties'||path==='/dashboard'?'border-b-2 border-Brand/Primary':''}>
-          <Link href="/home2">Home 2</Link>
+        <button className={''}>
+           Fractional Ownership
         </button>
-        <button className={path==='/properties'||path==='/dashboard'?'border-b-2 border-Brand/Primary':''}>
-          <Link href="/home3">Home 3</Link>
-        </button>
+      
         </div>
 <div className="hidden sm:flex gap-5">
         {user ? (
+          <>
+          <Image
+            src={user?.picture ? user.picture : ""}
+            alt="profile"
+            width={48}
+            height={24}
+            className='rounded-full'
+          />
           <LogoutLink className="inline-flex h-12 animate-shimmer hover:animate-shimmer2 items-center justify-center rounded-lg text-Sur-White border shadow-xl bg-[linear-gradient(110deg,#1c2b31,45%,#507B8B,55%,#1c2b31)] bg-[length:200%_100%] px-6 font-medium  transition-colors focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:ring-offset-2 focus:ring-offset-slate-50">
             Logout
           </LogoutLink>
+          </>
         ) : (
           <>
             
@@ -94,7 +103,13 @@ const Header = () => {
       </div>
       <DropdownMenu >
       <DropdownMenuTrigger asChild className="block sm:hidden">
-        <Button className="outline-none"><ArrowDropDownIcon/></Button>
+        <Button className="outline-none"> <Image
+            src={user?.picture ? user.picture : ""}
+            alt="profile"
+            width={48}
+            height={24}
+            className='rounded-full'
+          /></Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 bg-white">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
@@ -113,6 +128,9 @@ const Header = () => {
         <button className={path==='/properties'?'border-b-2 border-Brand/Primary':''}>
           <Link href="/properties">Properties</Link>
         </button>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+        <button className="">Our team</button>
         </DropdownMenuItem>
         <DropdownMenuGroup className="flex flex-col gap-3">
         {user ? (
