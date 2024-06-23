@@ -1,17 +1,15 @@
 import React from "react";
-import Header from "./Header";
+
 import Hero from "./Hero";
 import Sub from "./Sub";
-import Hero2 from "./Hero2";
-import Hero3 from "../home3/Hero3";
-import CustomizedAccordions from "./Accordian";
-import Accordianbg from "./Accordianbg";
+
+
+
 import Cards from "./Cards";
-import About2 from "../About";
-import Col from "./Col";
+import About2 from "./About";
+
 import Review2 from "./Review2";
-import { ParallaxScrollDemo } from "./Review3";
-import SvgComponent from "./Footersvg";
+
 
 const Home = () => {
   return (

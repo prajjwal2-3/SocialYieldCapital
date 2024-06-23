@@ -1,49 +1,88 @@
-// import React from 'react'
-// import about from '../../public/about.svg'
-// import about2 from '../../public/about2.svg'
-// import Image from 'next/image'
-// import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-// import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
-// import About2 from '../About'
-// const About = () => {
-//   return (
-//    <>
-//     <div className='py-24 px-6 md:px-14 xl:px-24 flex flex-col md:flex-row gap-10 justify-between '>
-//       <section className='md:w-8/12 flex flex-col 2xl:gap-5 items-start p-3'>
-//         <p className='text-xl 3xl:text-[1.5rem] 4xl:text-[2rem] font-medium text-[#507B8B]'>Who we are</p>
-//         <p className='text-4xl 3xl:text-5xl 4xl:text-6xl font-semibold '>Welcome to 
-//         <span className='text-4xl 3xl:text-5xl 4xl:text-6xl font-semibold text-[#507B8B] px-2'>Social Yield Capital</span>
-// Simple innovation, smarter investing.</p>
-//         <p className='text-[#6B7579] text-xl 4xl:text-3xl mt-5 font-medium'>At SYC, we are united by a common goal: to empower our stakeholders by providing unmatched investment opportunities. 
-// Offering co-ownership in carefully selected properties, enabling accessible and lucrative investment options.</p>
-//         <button className='text-[#507B8B] font-semibold mt-4 4xl:text-2xl '>Read more
-//         <ArrowForwardIcon fontSize='small' className='text-[#507B8B]'/>
-//         </button>
-//       </section>
-      
-//       <CardContainer className="inter-var">
-//       <CardBody className=" relative group/card dark:border-white/[0.2] border-black/[0.1] bg-gray-50 border dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black  w-auto h-auto rounded-xl   ">
-//        <CardItem className='absolute w-full'>
-//        <Image src={about} alt='' className='w-full object-cover rounded-xl group-hover/card:shadow-xl '/>
-//        </CardItem>
-//         <CardItem translateZ="100" className="w-full  relative">
-        
-//           <Image
-//             src={about2}
-           
-//             className=" w-full object-cover rounded-xl group-hover/card:shadow-xl"
-//             alt="thumbnail"
-//           />
-         
-//         </CardItem>
-       
-//       </CardBody>
-      
-//     </CardContainer>
-//     </div>
-    
-//    </>
-//   )
-// }
+import React from "react";
+import Image from "next/image";
+import { Divider } from "@mui/material";
+import un from '../../public/unsplash_uhzJ-Ss-57c.svg';
+import prop1 from '../../public/prop1.svg';
+import prop2 from '../../public/prop2.svg';
+import prop3 from '../../public/prop3.svg';
+import prop4 from '../../public/prop4.svg';
 
-// export default About
+const About = () => {
+  const arr = [
+    {
+      image: prop1,
+      title: 'THE THAMES',
+      address: 'Kensington Palace, London',
+    },
+    {
+      image: prop2,
+      title: 'DOWNING STREET',
+      address: 'Enfield and Haringey, London',
+    },
+    {
+      image: prop3,
+      title: 'JERMYN',
+      address: 'Havering and Redbridge, London',
+    },
+    {
+      image: prop4,
+      title: 'DOUGHTY STREET',
+      address: 'Havering and Redbridge, London',
+    },
+  ];
+
+  return (
+    <>
+      <div className="flex  flex-col md:flex-row">
+        <section className="md:w-4/12">
+        <section className="bg-black/20 w-full h-[30rem] absolute">
+        </section>
+        <section className="bg-transparent absolute flex-col flex md:hidden text-white md:w-8/12 gap-10 p-5 md:p-24">
+          <div className="flex flex-col gap-5 items-center">
+            <p className="text-white font-semibold">HOW IT WORKS</p>
+            <Divider className="bg-white w-full" />
+          </div>
+          <h2 className="font-medium text-4xl">
+            CHOOSE YOUR <br /> DREAM LOCATION
+          </h2>
+          <p className="w-10/12">
+            Start by telling us about your dream second home. Whether its a cottage in the Cotswolds or a modern flat in London,
+            select your preferred location, and lets begin the search for a property that fits your lifestyle and aspirations.
+          </p>
+        </section>
+          <Image src={un} alt="" className="w-full h-[30rem] object-cover" />
+        </section>
+        <section className="bg-L-Primary hidden flex-col md:flex text-white w-8/12 gap-10 p-24">
+          <div className="flex gap-5 items-center">
+            <p className="text-white/60">HOW IT WORKS</p>
+            <Divider className="bg-white w-8/12" />
+          </div>
+          <h2 className="font-medium text-4xl">
+            CHOOSE YOUR <br /> DREAM LOCATION
+          </h2>
+          <p className="w-10/12">
+            Start by telling us about your dream second home. Whether its a cottage in the Cotswolds or a modern flat in London,
+            select your preferred location, and lets begin the search for a property that fits your lifestyle and aspirations.
+          </p>
+        </section>
+      </div>
+      <div className="flex  flex-wrap  h-auto sm:h-[36rem]">
+        {arr.map((e, index) => (
+          <section key={index} className="w-6/12 sm:w-3/12 group relative overflow-hidden">
+            <div className="absolute z-10 w-full h-full bg-black/50 transition duration-300 transform group-hover:bg-transparent"></div>
+            <div className="absolute z-20 w-full h-full pb-12 flex justify-center items-end">
+              <p className="text-xl md:text-4xl font-bold text-white">{e.title}</p>
+            </div>
+            <Image
+              src={e.image}
+              alt=""
+              className="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110"
+            />
+          </section>
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default About;
