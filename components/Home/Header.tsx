@@ -61,7 +61,7 @@ const Header = () => {
       <Link href="/">SYC</Link>
       </p>
       <div
-        className={`  text-lg hidden justify-center  items-center h-11 gap-5 sm:flex ${path==='/AboutUs'|| path==='/dashboard' || path==='/properties'?'  text-L-Primary':'text-white'}`}
+        className={`  text-lg hidden justify-center  items-center h-11 gap-5 md:flex ${path==='/AboutUs'|| path==='/dashboard' || path==='/properties'?'  text-L-Primary':'text-white'}`}
       >
         <button className={`${path==='/'?'border-b-2 ':''}`}>
           <Link href="/">Home</Link>
@@ -78,7 +78,7 @@ const Header = () => {
         </button>
       
         </div>
-<div className="hidden sm:flex gap-5">
+<div className="hidden md:flex gap-5">
         {user ? (
           <>
           <Image
@@ -102,7 +102,7 @@ const Header = () => {
         )}
       </div>
       <DropdownMenu >
-      <DropdownMenuTrigger asChild className="block sm:hidden">
+      <DropdownMenuTrigger asChild className="block p-0 outline-none pr-5 md:hidden">
         <Button className="outline-none"> <Image
             src={user?.picture ? user.picture : ""}
             alt="profile"
@@ -111,7 +111,7 @@ const Header = () => {
             className='rounded-full'
           /></Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 bg-white">
+      <DropdownMenuContent className="w-56 mr-10 bg-white">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         
