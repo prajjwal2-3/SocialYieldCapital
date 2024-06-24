@@ -1,4 +1,4 @@
-"use client";
+
 import React, { useState } from "react";
 import vector from "../../public/Vector2.svg";
 import Image from "next/image";
@@ -12,7 +12,7 @@ import { property } from "@/constants/properties";
 import GradientChart from "./GradientChart";
 import FormDialog from "../FormDialog";
 import Chatbot from "./Chatbot";
-export default async function Dashboard  ()  {
+export default  function Dashboard  ()  {
   
   const initialProperty =  {
     "id": 1,
