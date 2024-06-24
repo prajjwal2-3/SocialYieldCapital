@@ -5,17 +5,15 @@ import Image from "next/image";
 import bed from "../../public/bed.svg";
 import axios from 'axios';
 import Link from "next/link";
-import AddIcon from '@mui/icons-material/Add';
-
-import { redirect } from "next/navigation";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { property } from "@/constants/properties";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import GradientChart from "./GradientChart";
 import FormDialog from "../FormDialog";
+import Chatbot from "./Chatbot";
 export default async function Dashboard  ()  {
+  
   const initialProperty =  {
     "id": 1,
     "name": "Cosy Studio Apartment",
@@ -80,7 +78,7 @@ interface PropertyList {
   let data = JSON.stringify({
     "inputText": inputText
   });
-  
+ 
   let config = {
     method: 'post',
     maxBodyLength: Infinity,
@@ -131,9 +129,7 @@ interface PropertyList {
     }
 
   };
-  function other(){
-    handleSelectProperty((prop?.id?? 0) + 1)
-  }
+  
   function getPropertyById(id:any) {
     // Find the property with the matching ID in the properties array
     let foundProperty = property.properties.find(prop => prop.id === id);
@@ -143,57 +139,8 @@ interface PropertyList {
   }
   return (
     <div className="pt-20 min-h-screen bg-Sur-light-200 flex flex-col px-5 md:px-0 md:flex-row-reverse ">
-     
-      <div className="bg-white hidden md:flex flex-col gap-10 mt-10 mr-5 rounded-lg h-screen p-5">
-      <div className=" h-fit p-4 rounded-lg border  border-neutral-200 flex-col justify-start items-start gap-1.5 flex">
-          <p className="text-gray-800 text-sm font-semibold font-['General Sans'] leading-[21px]">
-            Ask a question
-          </p>
-          <p className="text-zinc-500 text-sm font-medium font-['General Sans'] leading-[21px]">
-            Our ai agent & team can help
-          </p>
-        </div>
-        <div className=" h-fit p-4 rounded-lg border  border-neutral-200 flex-col justify-start items-start gap-6 flex">
-          <div className=" h-fit  bg-white rounded-lg  justify-center items-center flex">
-            <div className="grow shrink basis-0 h-[21px] justify-between items-center flex">
-              <input className="text-zinc-500 text-sm p-3 border border-neutral-200 outline-none rounded-lg mt-3 font-medium font-['General Sans'] leading-[21px]"  
-              
-              placeholder="Search for help"
-              />
-                
-            
-              
-            </div>
-          </div>
-          <div className="  h-fit flex-col justify-start items-start gap-4 flex">
-            <div className="bg-white rounded-lg px-3 py-2 justify-start items-center gap-1.5 inline-flex">
-              <div className="text-zinc-500 text-sm font-medium font-['General Sans'] leading-[21px]">
-                How to invest on syc
-              </div>
-            </div>
-            <div className=" px-3 bg-white rounded-lg py-1 justify-start items-center gap-1.5 inline-flex">
-              <div className="text-zinc-500 text-sm font-medium font-['General Sans'] leading-[21px]">
-                What are the steps to invest
-              </div>
-            </div>
-            <div className=" px-3 py-1 bg-white rounded-lg justify-start items-center gap-1.5 inline-flex">
-              <div className="text-zinc-500 text-sm font-medium font-['General Sans'] leading-[21px]">
-                How much return i can get
-              </div>
-            </div>
-            <div className=" px-3 py-1 bg-white rounded-lg justify-start items-center gap-1.5 inline-flex">
-              <div className="text-zinc-500 text-sm font-medium font-['General Sans'] leading-[21px]">
-                How to invest on syc
-              </div>
-            </div>
-            <div className=" px-3 py-1 bg-white rounded-lg justify-start items-center gap-1.5 inline-flex">
-              <div className="text-zinc-500 text-sm font-medium font-['General Sans'] leading-[21px]">
-                What are the steps to invest
-              </div>
-            </div>
-          </div>
-          </div>
-      </div>
+     <Chatbot/>
+      
        
       <div className="bg-Sur-light-200 hidden md:flex md:w-10/12 p-5 sm:p-10  flex-col md:flex-row-reverse gap-10">
         <div className="flex flex-col gap-4 h-screen md:w-8/12">
