@@ -5,6 +5,8 @@ import Image from "next/image";
 import bed from "../../public/bed.svg";
 import axios from 'axios';
 import Link from "next/link";
+import AddIcon from '@mui/icons-material/Add';
+
 import { redirect } from "next/navigation";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -12,6 +14,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { property } from "@/constants/properties";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import GradientChart from "./GradientChart";
+import FormDialog from "../FormDialog";
 export default async function Dashboard  ()  {
   const initialProperty =  {
     "id": 1,
@@ -357,6 +360,11 @@ interface PropertyList {
         </div>
       </div>
       <div className="flex md:hidden  bg-white w-full rounded-xl">
+     <div className="w-full h-full fixed z-50 flex justify-end items-end py-24 px-10 ">
+    
+      <FormDialog/>
+     </div>
+
       <div className=" h-fit p-4 md:p-6 bg-white rounded-lg flex-col  gap-6 w-full flex">
             <div className="w-full flex-col justify-start items-start gap-1 flex">
               <div className="text-gray-800 text-lg font-semibold font-['General Sans'] leading-[27px]">
@@ -444,6 +452,7 @@ interface PropertyList {
             </div>
           </div>
  <div className="w-full h-screen p-6 mb-5 md:hidden bg-white rounded-lg flex-col justify-start items-start gap-6 inline-flex">
+
             <div className=" justify-between items-center w-full  flex">
               <div className="text-gray-800 text-lg font-semibold font-['General Sans'] leading-[27px]">
                 Select Property
