@@ -22,7 +22,7 @@ export default function FormDialog() {
   let config = {
     method: 'post',
     maxBodyLength: Infinity,
-    url: 'http://localhost:3003/sum/askSYC',
+    url: 'https://wordent-be.vercel.app/sum/askSYC',
     headers: { 
       'Content-Type': 'application/json'
     },
