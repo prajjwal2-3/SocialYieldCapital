@@ -138,6 +138,7 @@ interface PropertyList {
     return foundProperty ? foundProperty : `No property found with ID: ${id}`;
   }
   return (
+   <>
     <div className="pt-20 min-h-screen bg-Sur-light-200 flex flex-col px-5 md:px-0 md:flex-row-reverse ">
      <Chatbot/>
       
@@ -307,10 +308,10 @@ interface PropertyList {
         </div>
       </div>
       <div className="flex md:hidden  bg-white w-full rounded-xl">
-     <div className="w-full h-full fixed z-50 flex justify-end items-end py-24 px-10 ">
+     
     
-      <FormDialog/>
-     </div>
+    
+    
 
       <div className=" h-fit p-4 md:p-6 bg-white rounded-lg flex-col  gap-6 w-full flex">
             <div className="w-full flex-col justify-start items-start gap-1 flex">
@@ -471,8 +472,10 @@ interface PropertyList {
               </button>
             </div>
           </div>
-
+        <section className="fixed bottom-0 right-0 m-5"><FormDialog/></section>
     </div>
+    
+   </>
   );
 };
 
