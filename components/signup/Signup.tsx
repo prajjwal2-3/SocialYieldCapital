@@ -1,12 +1,50 @@
+'use client'
 import React from "react";
-import Header from "../Home/Header";
-
+import axios from 'axios'
+import { useState } from "react";
+import { useRouter } from 'next/navigation'
 const Signup = () => {
+  const [name,setname]=useState('')
+  const router = useRouter()
+  const [number,setnumber]=useState('')
+  const [email,setemail]=useState('')
+  const [isloading,setisloading]=useState(false)
+  const [password,setpassword]=useState('')
+  let data = JSON.stringify({
+    "email": email,
+    "name": name,
+    "password": password,
+    "phone_number": number
+  });
+  
+  let config = {
+    method: 'post',
+    maxBodyLength: Infinity,
+    url: 'https://auth-server-bun.onrender.com/testuser',
+    headers: { 
+      'Content-Type': 'application/json'
+    },
+    data : data
+  };
+  function registerUser(){
+    setisloading(true)
+    axios.request(config)
+.then((response) => {
+  setisloading(false)
+  console.log(JSON.stringify(response.data));
+  router.push('/dashboard')
+})
+.catch((error) => {
+  setisloading(false)
+  console.log(error);
+});
+
+  }
   return (
-    <div className="pt-16">
+    <div className="pt-20">
       
-      <section className="w-full min-h-screen flex bg-[#E3EAEC] px-32 py-12 4xl:py-20 justify-between">
-        <div className="w-5/12 gap-9 h-[27rem]  flex flex-col justify-evenly">
+      <section className="w-full min-h-screen flex bg-[#E3EAEC] md:px-32 md:py-12 4xl:py-20 justify-between">
+        <div className="w-5/12 gap-9 h-[27rem] hidden md:flex flex-col justify-evenly">
           <p className="text-4xl 4xl:text-6xl font-semibold text-[#1C2B31] pr-7">
             Invest in real-estate with Social yield capital
           </p>
@@ -26,7 +64,7 @@ const Signup = () => {
             estate investment opportunities.
           </p>
         </div>
-        <div className="w-5/12">
+        <div className="md:w-5/12">
           <div className="bg-[#F6F8F9] rounded-sm p-8 ">
             <p className="text-L-Primary text-3xl font-semibold">
               Create an account
@@ -43,6 +81,9 @@ const Signup = () => {
                     type="text"
                     placeholder="Eg.Peter"
                     className="p-[12px_20px] rounded outline-none  border-2 border-Border"
+                    onChange={(e)=>{
+                      setname(e.target.value)
+                    }}
                   />
                 </div>
                 <div className="flex flex-col w-56 2xl:w-6/12">
@@ -60,15 +101,21 @@ const Signup = () => {
                   type="text"
                   placeholder="Eg.Peter@gmail.com"
                   className="p-[12px_20px] rounded outline-none  border-2 border-Border"
+                  onChange={(e)=>{
+                    setemail(e.target.value)
+                  }}
                 />
               </div>
 
               <div className="flex flex-col ">
                 <span className="text-L-Secondary">Phone Number</span>
                 <input
-                  type="text"
+                  type="number"
                   placeholder="Enter phone number"
                   className="p-[12px_20px] rounded outline-none border-2 border-Border"
+                  onChange={(e)=>{
+                    setnumber(e.target.value)
+                  }}
                 />
               </div>
               <div className="flex flex-col ">
@@ -77,6 +124,9 @@ const Signup = () => {
                   type="text"
                   placeholder="Enter your password"
                   className="p-[12px_20px] rounded outline-none border-2 border-Border"
+                  onChange={(e)=>{
+                    setpassword(e.target.value)
+                  }}
                 />
               </div>
               <div className="flex flex-col ">
@@ -89,7 +139,7 @@ const Signup = () => {
               </div>
             </section>
             <div className="">
-            <button className="w-full bg-Brand/Primary rounded-full text-center text-Sur-White my-7 p-[12px_20px]">Create my account</button>
+            <button className="w-full bg-Brand/Primary rounded-full text-center text-Sur-White my-7 p-[12px_20px]" onClick={registerUser}>{isloading?'Creating Account...':'Create Your Account'}</button>
         </div>
           </div>
           
