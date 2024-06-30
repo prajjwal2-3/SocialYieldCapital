@@ -51,7 +51,7 @@ const Header = () => {
       id="header"
       className={`fixed w-full  h-auto max-h-[86px] md:p-[20px_60px] p-[12px] z-50 gap-0
        flex justify-between items-center
-       ${path.startsWith('/view/')||path==='/authDemo'?'bg-L-Primary':down?'bg-Brand/Primary bg-opacity-30 shadow-lg shadow-black/20   backdrop-blur-sm':'bg-transparent '}
+       ${path.startsWith('/view/')||path==='/signup'?'bg-L-Primary':down?'bg-Brand/Primary bg-opacity-30 shadow-lg shadow-black/20   backdrop-blur-sm':'bg-transparent '}
        
        `}
     >

@@ -2,6 +2,7 @@
 import React from "react";
 import axios from 'axios'
 import { useState } from "react";
+import { generateRandomGmailId,generateRandomGibberishName,generateRandomMobileNumber,generateRandomPassword } from "./Getrandom";
 import { useRouter } from 'next/navigation'
 const Signup = () => {
   const [name,setname]=useState('')
@@ -10,35 +11,58 @@ const Signup = () => {
   const [email,setemail]=useState('')
   const [isloading,setisloading]=useState(false)
   const [password,setpassword]=useState('')
-  let data = JSON.stringify({
+  let data = ({
     "email": email,
     "name": name,
     "password": password,
     "phone_number": number
   });
-  
-  let config = {
-    method: 'post',
-    maxBodyLength: Infinity,
-    url: 'https://auth-server-bun.onrender.com/testuser',
-    headers: { 
-      'Content-Type': 'application/json'
-    },
-    data : data
-  };
-  function registerUser(){
+  function setvalue(){
+      setemail(generateRandomGmailId())
+      console.log(generateRandomGibberishName())
+      setname(generateRandomGibberishName())
+      setnumber(generateRandomMobileNumber())
+      setpassword(generateRandomPassword(12))
+  }
+  async function signUpfromlocal(){
+    if (!name || !number || !email || !password) {
+      console.error('All fields are required');
+      return;
+    }
     setisloading(true)
-    axios.request(config)
-.then((response) => {
+    try {
+      const response = await axios.post('http://localhost:8080/auth/signup', data,{withCredentials:true});
   setisloading(false)
-  console.log(JSON.stringify(response.data));
-  router.push('/dashboard')
-})
-.catch((error) => {
+      if (response.status === 200) {
+        router.push('/dashboard')
+        console.log('Signup successful:', response.data);
+      } else {
+        console.error('Signup failed:', response.data);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setisloading(false)
+    }
+  }
+  async function signUp(){
+    if (!name || !number || !email || !password) {
+      console.error('All fields are required');
+      return;
+    }
+    setisloading(true)
+    try {
+      const response = await axios.post('https://auth-server-bun.onrender.com/auth/signup', data,{withCredentials:true});
   setisloading(false)
-  console.log(error);
-});
-
+      if (response.status === 200) {
+        router.push('/dashboard')
+        console.log('Signup successful:', response.data);
+      } else {
+        console.error('Signup failed:', response.data);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setisloading(false)
+    }
   }
   return (
     <div className="pt-20">
@@ -80,6 +104,7 @@ const Signup = () => {
                   <input
                     type="text"
                     placeholder="Eg.Peter"
+                    value={name}
                     className="p-[12px_20px] rounded outline-none  border-2 border-Border"
                     onChange={(e)=>{
                       setname(e.target.value)
@@ -100,6 +125,7 @@ const Signup = () => {
                 <input
                   type="text"
                   placeholder="Eg.Peter@gmail.com"
+                  value={email}
                   className="p-[12px_20px] rounded outline-none  border-2 border-Border"
                   onChange={(e)=>{
                     setemail(e.target.value)
@@ -112,6 +138,7 @@ const Signup = () => {
                 <input
                   type="number"
                   placeholder="Enter phone number"
+                  value={number}
                   className="p-[12px_20px] rounded outline-none border-2 border-Border"
                   onChange={(e)=>{
                     setnumber(e.target.value)
@@ -123,6 +150,7 @@ const Signup = () => {
                 <input
                   type="text"
                   placeholder="Enter your password"
+                  value={password}
                   className="p-[12px_20px] rounded outline-none border-2 border-Border"
                   onChange={(e)=>{
                     setpassword(e.target.value)
@@ -138,8 +166,10 @@ const Signup = () => {
                 />
               </div>
             </section>
-            <div className="">
-            <button className="w-full bg-Brand/Primary rounded-full text-center text-Sur-White my-7 p-[12px_20px]" onClick={registerUser}>{isloading?'Creating Account...':'Create Your Account'}</button>
+            <div className="flex flex-col gap-3">
+            <button className="w-full bg-Brand/Primary rounded-full text-center text-Sur-White  p-[12px_20px]" onClick={setvalue}>set Values</button>
+            <button className="w-full bg-Brand/Primary rounded-full text-center text-Sur-White  p-[12px_20px]" onClick={signUp}>{isloading?'Creating Account...':'Create Your Account'}</button>
+            <button className="w-full bg-Brand/Primary rounded-full text-center text-Sur-White  p-[12px_20px]" onClick={signUpfromlocal}>{isloading?'Creating Account...':'Create Your Account for local'}</button>
         </div>
           </div>
           
