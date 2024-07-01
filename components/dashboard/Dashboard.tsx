@@ -129,7 +129,15 @@ interface PropertyList {
     }
 
   };
-  
+  async function getresponse(){
+    const response = await axios.post('http://localhost:8080/auth/isAuthenticated', {}, {
+      
+      withCredentials: true 
+  });
+
+  console.log(response.data);
+
+  }
   function getPropertyById(id:any) {
     // Find the property with the matching ID in the properties array
     let foundProperty = property.properties.find(prop => prop.id === id);
@@ -140,6 +148,7 @@ interface PropertyList {
   return (
    <>
     <div className="pt-20 min-h-screen bg-Sur-light-200 flex flex-col px-5 md:px-0 md:flex-row-reverse ">
+      <button onClick={getresponse}>oi</button>
      <Chatbot/>
       
        
