@@ -1,4 +1,4 @@
-// SignoutButton.js
+'use client'
 import React from 'react';
 import axios from 'axios';
 
@@ -18,9 +18,11 @@ const SignOut = () => {
   };
 
   return (
-    <button onClick={handleSignout}>
+   <div className="pt-20 bg-red-500">
+     <button onClick={handleSignout} className=''>
       Sign Out
     </button>
+   </div>
   );
 };
 
