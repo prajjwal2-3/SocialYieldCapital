@@ -40,25 +40,28 @@ const VerifyOtp = () => {
   };
   const handleSubmittolocal = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
-
+  
     const userData = {
-       otp,
+      otp,
     };
-
-    // Retrieve cookies
-
-
+  
     try {
-      const response = await axios.post('http://localhost:8080/auth/verifySignUpOtp', userData, {
-        
-        withCredentials:true
+      const response = await fetch('http://localhost:8080/auth/verifySignUpOtp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+        credentials: 'include', // This is equivalent to axios's withCredentials: true
       });
-
-      if (response.status === 200) {
-        router.push('/dashboard')
-        console.log('OTP verification successful:', response.data);
+  
+      if (response.ok) {
+        const data = await response.json();
+        router.push('/dashboard');
+        console.log('OTP verification successful:', data);
       } else {
-        console.error('OTP verification failed:', response.data);
+        const errorData = await response.json();
+        console.error('OTP verification failed:', errorData);
       }
     } catch (error) {
       console.error('Error:', error);

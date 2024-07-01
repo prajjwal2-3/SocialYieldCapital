@@ -44,24 +44,37 @@ const Signup = () => {
       setisloading(false)
     }
   }
-  async function signUp(){
+  async function signUp() {
     if (!name || !number || !email || !password) {
       console.error('All fields are required');
       return;
     }
-    setisloading(true)
+  
+    setisloading(true);
+  
     try {
-      const response = await axios.post('https://auth-server-bun.onrender.com/auth/signup', data,{withCredentials:true});
-  setisloading(false)
-      if (response.status === 200) {
-        router.push('/dashboard')
-        console.log('Signup successful:', response.data);
+      const response = await fetch('https://auth-server-bun.onrender.com/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+        credentials: 'include',
+      });
+  
+      setisloading(false);
+  
+      if (response.ok) {
+        const responseData = await response.json();
+        router.push('/dashboard');
+        console.log('Signup successful:', responseData);
       } else {
-        console.error('Signup failed:', response.data);
+        const errorData = await response.json();
+        console.error('Signup failed:', errorData);
       }
     } catch (error) {
       console.error('Error:', error);
-      setisloading(false)
+      setisloading(false);
     }
   }
   return (
