@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useState } from "react";
 import { generateRandomGmailId,generateRandomGibberishName,generateRandomMobileNumber,generateRandomPassword } from "./Getrandom";
 import { useRouter } from 'next/navigation'
+import Cookies from 'js-cookie'
 const Signup = () => {
   const [name,setname]=useState('')
   const router = useRouter()
@@ -36,6 +37,20 @@ const Signup = () => {
       if (response.status === 200) {
         router.push('/dashboard')
         console.log('Signup successful:', response.data);
+        const refreshtoken = response.data.refresh_token_from_s
+        const accesstoken = response.data.access_token_from_s
+        Cookies.set('access_token_from_s',accesstoken,{
+          secure:true,
+          sameSite:'none',
+          expires:30
+        })
+        Cookies.set('refresh_token_from_s',refreshtoken,{
+          secure:true,
+          sameSite:'none',
+          expires:30
+        })
+        
+       
       } else {
         console.error('Signup failed:', response.data);
       }
@@ -49,32 +64,33 @@ const Signup = () => {
       console.error('All fields are required');
       return;
     }
-  
-    setisloading(true);
-  
+    setisloading(true)
     try {
-            const response = await fetch('https://auth-server-bun.onrender.com/auth/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-        credentials: 'include',
-      });
-  
-      setisloading(false);
-  
-      if (response.ok) {
-        const responseData = await response.json();
-        router.push('/dashboard');
-        console.log('Signup successful:', responseData);
+      const response = await axios.post('https://auth-server-bun.onrender.com/auth/signup', data,{withCredentials:true});
+  setisloading(false)
+      if (response.status === 200) {
+        router.push('/dashboard')
+        console.log('Signup successful:', response.data);
+        const refreshtoken = response.data.refresh_token_from_s
+        const accesstoken = response.data.access_token_from_s
+        Cookies.set('access_token_from_s',accesstoken,{
+          secure:true,
+          sameSite:'none',
+          expires:30
+        })
+        Cookies.set('refresh_token_from_s',refreshtoken,{
+          secure:true,
+          sameSite:'none',
+          expires:30
+        })
+        
+       
       } else {
-        const errorData = await response.json();
-        console.error('Signup failed:', errorData);
+        console.error('Signup failed:', response.data);
       }
     } catch (error) {
       console.error('Error:', error);
-      setisloading(false);
+      setisloading(false)
     }
   }
   return (
