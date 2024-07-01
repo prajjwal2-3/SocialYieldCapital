@@ -53,7 +53,7 @@ const Signup = () => {
     setisloading(true);
   
     try {
-      const response = await fetch('https://auth-server-bun.onrender.com/auth/signup', {
+            const response = await fetch('https://auth-server-bun.onrender.com/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
